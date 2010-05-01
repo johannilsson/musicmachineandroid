@@ -21,8 +21,7 @@ import java.util.List;
 public class SpotifyGateway {
     private static String TAG = "SpotifyGateway";
 
-    public List<SpotifyGatewayTrack> searchTrack(String searchTerm)
-    {
+    public List<SpotifyGatewayTrack> searchTrack(String searchTerm) throws SpotifyGatewayTrackParser.SpotifyGatewayParseException {
         List<SpotifyGatewayTrack> searchResult;
 
         HttpGet searchHttpGet = new HttpGet("http://ws.spotify.com/search/1/track.xml?q=" + URLEncoder.encode(searchTerm));
