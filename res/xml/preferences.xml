@@ -8,5 +8,4 @@
   
 
 <EditTextPreference android:key="server_url" android:title="Server URL" android:defaultValue="http://sid.local:8080"></EditTextPreference>
-<EditTextPreference android:key="username" android:title="Username"></EditTextPreference>
 </PreferenceScreen>

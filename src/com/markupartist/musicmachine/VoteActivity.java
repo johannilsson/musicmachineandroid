@@ -1,24 +1,24 @@
 package com.markupartist.musicmachine;
 
-import java.io.IOException;
-import java.util.List;
-
-import com.markupartist.musicmachine.gateway.MusicMachineGateway;
-import com.markupartist.musicmachine.gateway.SpotifyGateway;
-import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
-import com.markupartist.musicmachine.gateway.MusicMachineGateway.UserHasAlreadyVotedException;
-
 import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.markupartist.musicmachine.gateway.MusicMachineGateway;
+import com.markupartist.musicmachine.gateway.MusicMachineGateway.UserHasAlreadyVotedException;
+
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class VoteActivity extends Activity implements OnClickListener {
     private Bundle mExtras;
@@ -94,7 +94,25 @@ public class VoteActivity extends Activity implements OnClickListener {
             SharedPreferences sharedPreferences = PreferenceManager
                     .getDefaultSharedPreferences(VoteActivity.this);
 
-            String userId = sharedPreferences.getString("username", "");
+            String userId = "";
+            TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+            String deviceId = telephonyManager.getDeviceId();
+            try {
+                MessageDigest digest = MessageDigest.getInstance("SHA-1");
+                digest.update(deviceId.getBytes());
+                byte messageDigest[] = digest.digest();
+
+                // Create Hex String
+                StringBuffer hexString = new StringBuffer();
+                for (int i=0; i<messageDigest.length; i++)
+                    hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
+
+                userId = hexString.toString();
+            } catch (NoSuchAlgorithmException e) {
+                Log.e("VoteTask", "MessageDigest.getInstance", e);
+            }
+
+            Log.d("VoteTask", "UserId: " + userId);
 
             MusicMachineGateway mmGateway = new MusicMachineGateway(sharedPreferences.getString("server_url", ""));
 
