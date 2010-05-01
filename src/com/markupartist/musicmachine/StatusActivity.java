@@ -1,11 +1,9 @@
 package com.markupartist.musicmachine;
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,12 +17,11 @@ import android.widget.Toast;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway.PlaylistTrack;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
 
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class StatusActivity extends Activity implements OnClickListener {
 	private final static String LOG_TAG = StatusActivity.class.getSimpleName();
@@ -65,7 +62,7 @@ public class StatusActivity extends Activity implements OnClickListener {
         requestPlaylist();
 
         SpotifyGateway gateway = new SpotifyGateway();
-        List<SpotifyGateway.Track> searchResult = gateway.searchTrack("Foo");
+        List<SpotifyGatewayTrack> searchResult = gateway.searchTrack("Foo");
         Log.d("FOO", searchResult.get(0).toString());
     }
     
