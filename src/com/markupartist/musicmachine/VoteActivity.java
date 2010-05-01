@@ -56,6 +56,7 @@ public class VoteActivity extends Activity implements OnClickListener {
         	
         	mExtras.putString("mm.artist", artist);
         	mExtras.putString("mm.title", title);
+        	mExtras.putString("mm.album", "-");
         	mExtras.putString("mm.uri", uri);
         	//Toast.makeText(this, String.format("%s, %s (%s) (%s)", artist, title, url, uri), Toast.LENGTH_LONG).show();
         }
