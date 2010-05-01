@@ -1,0 +1,1706 @@
+<tracks xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.spotify.com/ns/music/1">
+  <opensearch:Query role="request" startPage="1" searchTerms="Foo%fighters"/>
+  <opensearch:totalResults>463</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <track href="spotify:track:3ZsjgLDSvusBgxGWrTAVto">
+    <name>The Pretender</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700007,USRW30700007</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>269.373000</length>
+    <popularity>0.84268</popularity>
+  </track>
+  <track href="spotify:track:4nUM7pGcTUK2pY1d2LybrT">
+    <name>Best Of You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500001</id>
+    <album href="spotify:album:6nf2P1xl5Z4qHdTAsdvo6B">
+      <name>Best Of You</name>
+      <released>2005</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>256.600000</length>
+    <popularity>0.82561</popularity>
+  </track>
+  <track href="spotify:track:7HS35r2OVvrj40GxdQqd6P">
+    <name>Wheels</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRC10900528</id>
+    <album href="spotify:album:6Dgtc6gv91FLT2zRZU2mis">
+      <name>Wheels</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>277.693000</length>
+    <popularity>0.81923</popularity>
+  </track>
+  <track href="spotify:track:5vMDvp6nUnTYhl5NMpgOnL">
+    <name>All My Life</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200001</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>262.733000</length>
+    <popularity>0.79700</popularity>
+  </track>
+  <track href="spotify:track:07q6QTQXyPRCf7GbLakRPr">
+    <name>Everlong</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600011</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>249.986000</length>
+    <popularity>0.78661</popularity>
+  </track>
+  <track href="spotify:track:7u5dBtASrtOuBTTZjJrvuJ">
+    <name>My Hero</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600007</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>258.973000</length>
+    <popularity>0.78193</popularity>
+  </track>
+  <track href="spotify:track:7gggcq4riT0xZCfxBd5cNG">
+    <name>Times Like These</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600046</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>12</track-number>
+    <length>325.333000</length>
+    <popularity>0.76988</popularity>
+  </track>
+  <track href="spotify:track:2HbVINmehEbPmjlcueXEJJ">
+    <name>All My Life</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200001</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>263.560000</length>
+    <popularity>0.76315</popularity>
+  </track>
+  <track href="spotify:track:43TxY9bYSyZ4QRPA0UJddL">
+    <name>Monkey Wrench</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600001</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>230.826000</length>
+    <popularity>0.75453</popularity>
+  </track>
+  <track href="spotify:track:1sn6iOK93jnp0Hn5BnNOXy">
+    <name>Best Of You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500001</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>254.973000</length>
+    <popularity>0.75219</popularity>
+  </track>
+  <track href="spotify:track:3QmesrvdbPjwf7i40nht1D">
+    <name>Everlong - Acoustic Version</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30900002</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>16</track-number>
+    <length>250.906000</length>
+    <popularity>0.75081</popularity>
+  </track>
+  <track href="spotify:track:0mWiuXuLAJ3Brin3Or2x6v">
+    <name>Learn To Fly</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900002</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>234.800000</length>
+    <popularity>0.74856</popularity>
+  </track>
+  <track href="spotify:track:6HNruFQlzQx4ulL4ppRLYI">
+    <name>The Pretender</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700007</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>267.360000</length>
+    <popularity>0.74525</popularity>
+  </track>
+  <track href="spotify:track:4xanWVQIzdCf51mg8cd1cQ">
+    <name>Times Like These</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200005</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>267.973000</length>
+    <popularity>0.74399</popularity>
+  </track>
+  <track href="spotify:track:1SOEuHGF0fwrhp3fhSPBlX">
+    <name>Learn To Fly</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900002,USRW39900002,USRW39900002</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>235.293000</length>
+    <popularity>0.74138</popularity>
+  </track>
+  <track href="spotify:track:3KsatAMRt1a7iryhWt5I8U">
+    <name>Wheels</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRC10900528</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>14</track-number>
+    <length>278.213000</length>
+    <popularity>0.72641</popularity>
+  </track>
+  <track href="spotify:track:6pb5BBnIM5IM7R1cqag6rE">
+    <name>Big Me</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500002,USRW29500002</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>132.840000</length>
+    <popularity>0.66570</popularity>
+  </track>
+  <track href="spotify:track:2vLGMSMrBcOpJcveRvp0j6">
+    <name>Times Like These</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200005</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>265.640000</length>
+    <popularity>0.71751</popularity>
+  </track>
+  <track href="spotify:track:3Y8X0tMSEKZt7rOHDwCrtt">
+    <name>Breakout</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900004</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>10</track-number>
+    <length>200.826000</length>
+    <popularity>0.71700</popularity>
+  </track>
+  <track href="spotify:track:4Hv5jUXVQveCj36wN6dPmD">
+    <name>Long Road To Ruin</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700010</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>228.346000</length>
+    <popularity>0.71151</popularity>
+  </track>
+  <track href="spotify:track:04Jk0uP8SbDHLyAKfRctNQ">
+    <name>Big Me</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500002</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>9</track-number>
+    <length>132.333000</length>
+    <popularity>0.71036</popularity>
+  </track>
+  <track href="spotify:track:74QDbj3qdHQhofu01RyFtT">
+    <name>Word Forward</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30900001</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>15</track-number>
+    <length>226.640000</length>
+    <popularity>0.70778</popularity>
+  </track>
+  <track href="spotify:track:5zQK2XSbDptYdGDgxI7E0d">
+    <name>Long Road To Ruin</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700010,USRW30700010</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>224.880000</length>
+    <popularity>0.70675</popularity>
+  </track>
+  <track href="spotify:track:4sWk6tbgVPkA8OAk0utIz3">
+    <name>Let It Die</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700008,USRW30700008</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>244.960000</length>
+    <popularity>0.70588</popularity>
+  </track>
+  <track href="spotify:track:5oCMnpuRd3rUL9clNWbjr0">
+    <name>My Hero</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600039</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>291.080000</length>
+    <popularity>0.70126</popularity>
+  </track>
+  <track href="spotify:track:1eoQNKgUm4dX9nk0876FsL">
+    <name>Skin And Bones</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600044</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>13</track-number>
+    <length>242.373000</length>
+    <popularity>0.69506</popularity>
+  </track>
+  <track href="spotify:track:6u47WBqEuowycc48t2Wekx">
+    <name>Everlong</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600011,USRW29600011</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>249.773000</length>
+    <popularity>0.69255</popularity>
+  </track>
+  <track href="spotify:track:2wO8aOvN1ogLy1N8XT1WJE">
+    <name>This Is A Call</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500014,USRW29500014</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>233.360000</length>
+    <popularity>0.63632</popularity>
+  </track>
+  <track href="spotify:track:1KZVbkPnQYwaN5OeAHGa4P">
+    <name>This Is A Call</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500014</id>
+    <album href="spotify:album:1zCNrbPpz5OLSr6mSpPdKm">
+      <name>Greatest Hits</name>
+      <released>2009</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>12</track-number>
+    <length>233.066000</length>
+    <popularity>0.69042</popularity>
+  </track>
+  <track href="spotify:track:5IgzL1X4GhuoVTmtQ1zZQP">
+    <name>Stranger Things Have Happened</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700012,USRW30700012</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>321.053000</length>
+    <popularity>0.68480</popularity>
+  </track>
+  <track href="spotify:track:4LGKzrdEeBwR9UHCGlDT0W">
+    <name>I'll Stick Around</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500010,USRW29500010</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>232.533000</length>
+    <popularity>0.62377</popularity>
+  </track>
+  <track href="spotify:track:0Y6LOyCGL6AgWDc0zGcLKt">
+    <name>Monkey Wrench</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600001,USRW29600001</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>231.160000</length>
+    <popularity>0.67674</popularity>
+  </track>
+  <track href="spotify:track:4MOHOrZFnYeNcSGSl6UyPn">
+    <name>Everlong</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600049</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>15</track-number>
+    <length>395.266000</length>
+    <popularity>0.67329</popularity>
+  </track>
+  <track href="spotify:track:5XUpAb2zC8G404RPkwb09H">
+    <name>Alone + Easy Target</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500001,USRW29500001</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>245.666000</length>
+    <popularity>0.61291</popularity>
+  </track>
+  <track href="spotify:track:0TH91AsvYP9Hy7RvPkZU6M">
+    <name>Come Alive</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700011,USRW30700011</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>310.600000</length>
+    <popularity>0.66661</popularity>
+  </track>
+  <track href="spotify:track:4iohc0bMy40gYh58rGCkFU">
+    <name>Erase/Replace</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700009,USRW30700009</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>253.133000</length>
+    <popularity>0.66356</popularity>
+  </track>
+  <track href="spotify:track:2styBKRBhlZwPl5geag8KJ">
+    <name>Good Grief</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500008,USRW29500008</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>241.226000</length>
+    <popularity>0.60668</popularity>
+  </track>
+  <track href="spotify:track:7mCjnfGC7XtQ9oRzMdT3Q5">
+    <name>Home</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700018,USRW30700018</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>12</track-number>
+    <length>292.693000</length>
+    <popularity>0.65816</popularity>
+  </track>
+  <track href="spotify:track:2GLvti03BZVcrQdRZ9JPfD">
+    <name>DOA</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500008</id>
+    <album href="spotify:album:1UdNxL9n7V09ZTgg02fjok">
+      <name>DOA</name>
+      <released>2005</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>254.480000</length>
+    <popularity>0.65771</popularity>
+  </track>
+  <track href="spotify:track:3rxo8KsF6AwfnbLNh7JciD">
+    <name>But, Honestly</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700017,USRW30700017</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>275.706000</length>
+    <popularity>0.65561</popularity>
+  </track>
+  <track href="spotify:track:5tULmRxZrbnzh32H3ZIghu">
+    <name>Floaty</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500004,USRW29500004</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>269.266000</length>
+    <popularity>0.59953</popularity>
+  </track>
+  <track href="spotify:track:44NOhlESrtoF3YCmaaRPWe">
+    <name>My Hero</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600007,USRW29600007</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>260.333000</length>
+    <popularity>0.65011</popularity>
+  </track>
+  <track href="spotify:track:6CbeOOrDFQuY1tXYscKqZQ">
+    <name>For All The Cows</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500005,USRW29500005</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>9</track-number>
+    <length>209.240000</length>
+    <popularity>0.59379</popularity>
+  </track>
+  <track href="spotify:track:3Ux0LuhatthSa1VbccxX8k">
+    <name>Cheer Up, Boys (Your Make Up Is Running)</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700013,USRW30700013</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>221.173000</length>
+    <popularity>0.64319</popularity>
+  </track>
+  <track href="spotify:track:5FafTKnxl219ZUWFzaufRQ">
+    <name>Weenie Beenie</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500015,USRW29500015</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>165.400000</length>
+    <popularity>0.58892</popularity>
+  </track>
+  <track href="spotify:track:5aWcZ0q3LfnYBAJTUQyBfH">
+    <name>Summer's End</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700014,USRW30700014</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>277.973000</length>
+    <popularity>0.63941</popularity>
+  </track>
+  <track href="spotify:track:7rKm5BfLqxYko007wiamnm">
+    <name>X-Static</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500016,USRW29500016</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>10</track-number>
+    <length>253.493000</length>
+    <popularity>0.58422</popularity>
+  </track>
+  <track href="spotify:track:7lMGc58V3S7lD2SLNRdOKx">
+    <name>Wattershed</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500017,USRW29500017</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>133.506000</length>
+    <popularity>0.58136</popularity>
+  </track>
+  <track href="spotify:track:1lEh8FfgIuT94pBzCObIUb">
+    <name>Low</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200003</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>268.040000</length>
+    <popularity>0.63519</popularity>
+  </track>
+  <track href="spotify:track:0nHpW0rJVeioHYdENEPdYB">
+    <name>Ballad Of The Beaconsfield Miners</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700015,USRW30700015</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>9</track-number>
+    <length>152.213000</length>
+    <popularity>0.63064</popularity>
+  </track>
+  <track href="spotify:track:1Oy0vCHc4rUCOphROBbPSd">
+    <name>Oh, George</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500011,USRW29500011</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>181.800000</length>
+    <popularity>0.57606</popularity>
+  </track>
+  <track href="spotify:track:5xPMXf4Lcq4d7bQIZbgN4Y">
+    <name>Statues</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700016,USRW30700016</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>10</track-number>
+    <length>227.813000</length>
+    <popularity>0.62748</popularity>
+  </track>
+  <track href="spotify:track:5EwyzrFLXlcnPenrPQ9DlO">
+    <name>Exhausted</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29500003,USRW29500003</id>
+    <album href="spotify:album:4EnNuo8fG7dMoxMefbApRY">
+      <name>Foo Fighters</name>
+      <released>1995</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>12</track-number>
+    <length>349.893000</length>
+    <popularity>0.57278</popularity>
+  </track>
+  <track href="spotify:track:4UAwxjSP7zPMVgKaKDzs8C">
+    <name>Breakout</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900004,USRW39900004,USRW39900004</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>200.800000</length>
+    <popularity>0.62660</popularity>
+  </track>
+  <track href="spotify:track:5ojoKlhPTdaOLQKTO2nYD4">
+    <name>Halo</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200008</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>306.360000</length>
+    <popularity>0.62018</popularity>
+  </track>
+  <track href="spotify:track:17IGISO6bhBzZDErMUUsPF">
+    <name>Tired Of You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200007</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>311.266000</length>
+    <popularity>0.61815</popularity>
+  </track>
+  <track href="spotify:track:5nxAgBhEaLozh5UZ9qWmDM">
+    <name>Once &amp; For All (Demo)</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700019,USRW30700019</id>
+    <album href="spotify:album:2ovXUTjkBkNlgAU7DTIxX9">
+      <name>Echoes, Silence, Patience &amp; Grace</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HN HR HT HU IE IL IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>13</track-number>
+    <length>227.920000</length>
+    <popularity>0.61411</popularity>
+  </track>
+  <track href="spotify:track:5OsCYPDUDPyoaVobsCwMnt">
+    <name>Skin And Bones</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600044</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>10</track-number>
+    <length>240.960000</length>
+    <popularity>0.61063</popularity>
+  </track>
+  <track href="spotify:track:1TQ9HF8LMlOTAIJeX472hk">
+    <name>Next Year</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600040</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>274.653000</length>
+    <popularity>0.60705</popularity>
+  </track>
+  <track href="spotify:track:1352ab20uMPsZR0SbEbFuI">
+    <name>Hey, Johnny Park!</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600003,USRW29600003</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>248.706000</length>
+    <popularity>0.60693</popularity>
+  </track>
+  <track href="spotify:track:5i5juPvTbxb6PVSuAFOsnQ">
+    <name>Razor</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600035</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>408.080000</length>
+    <popularity>0.60465</popularity>
+  </track>
+  <track href="spotify:track:4JfhB9Kr0y2Gu0VNL79Dz1">
+    <name>Best Of You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600048</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>14</track-number>
+    <length>302.626000</length>
+    <popularity>0.60217</popularity>
+  </track>
+  <track href="spotify:track:2M89czls4iL4UaGx9Sh4So">
+    <name>Walking After You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600037</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>318.693000</length>
+    <popularity>0.60211</popularity>
+  </track>
+  <track href="spotify:track:3MLmP5erHiyOCI5Iy7NhI9">
+    <name>Stacked Actors</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900003,USRW39900003,USRW39900003</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>256.466000</length>
+    <popularity>0.60174</popularity>
+  </track>
+  <track href="spotify:track:03AIRTc1MIGDa4Lpnp0pqP">
+    <name>DOA</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500008</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>252.106000</length>
+    <popularity>0.59983</popularity>
+  </track>
+  <track href="spotify:track:1GzQuGJ3s4IbcJ2wElWShy">
+    <name>In Your Honor</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500025</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>230.093000</length>
+    <popularity>0.59928</popularity>
+  </track>
+  <track href="spotify:track:2nWkU4AMu10JmBpZ8F0n9J">
+    <name>Have It All</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200004</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>297.960000</length>
+    <popularity>0.59835</popularity>
+  </track>
+  <track href="spotify:track:3YXEmSJBG212RKBcafBK8V">
+    <name>Generator</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900006,USRW39900006,USRW39900006</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>227.800000</length>
+    <popularity>0.59823</popularity>
+  </track>
+  <track href="spotify:track:579jpmKfLZfk1gwL7s2lXO">
+    <name>Over And Out</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600036</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>356.760000</length>
+    <popularity>0.59579</popularity>
+  </track>
+  <track href="spotify:track:21mnIcLP1cDTmAZdUiSeYp">
+    <name>Cold Day In The Sun</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600043</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>9</track-number>
+    <length>206.213000</length>
+    <popularity>0.59465</popularity>
+  </track>
+  <track href="spotify:track:2NgGZLoYcPfE4WWrJ1uSor">
+    <name>Marigold</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600038</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>199.693000</length>
+    <popularity>0.59193</popularity>
+  </track>
+  <track href="spotify:track:0kgvrl0y1crmkZi9nXHZU7">
+    <name>Lonely As You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200009</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>277.106000</length>
+    <popularity>0.59143</popularity>
+  </track>
+  <track href="spotify:track:0x8c3FJQr9ATtvl0RzUiIx">
+    <name>Disenchanted Lullaby</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200006</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>272.933000</length>
+    <popularity>0.59086</popularity>
+  </track>
+  <track href="spotify:track:1oGoqQmVrTi3gEYNk5vqbX">
+    <name>Aurora</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900007,USRW39900007,USRW39900007</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>349.800000</length>
+    <popularity>0.59026</popularity>
+  </track>
+  <track href="spotify:track:2rV3jfOWlnRqhtLidDosfe">
+    <name>Miracle</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500017</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>209.600000</length>
+    <popularity>0.59024</popularity>
+  </track>
+  <track href="spotify:track:0gzrErMqfoQhuc8FCIzSwP">
+    <name>Walking After You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600012,USRW29600012</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>12</track-number>
+    <length>304.666000</length>
+    <popularity>0.58916</popularity>
+  </track>
+  <track href="spotify:track:7LebjXLsIxOnS05G8rYIAl">
+    <name>Another Round</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600041</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>7</track-number>
+    <length>295.266000</length>
+    <popularity>0.58537</popularity>
+  </track>
+  <track href="spotify:track:7t1FW62TCoBPJpo4ugdjup">
+    <name>Come Back</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200012</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>469.866000</length>
+    <popularity>0.58470</popularity>
+  </track>
+  <track href="spotify:track:0IY1ZoqbXtlUkTXrHFEcyB">
+    <name>No Way Back</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500007</id>
+    <album href="spotify:album:5544o7wpDPR98N6RbajQXS">
+      <name>No Way Back</name>
+      <released>2006</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>196.946000</length>
+    <popularity>0.58388</popularity>
+  </track>
+  <track href="spotify:track:35eI7JN7aJ9lkCUgcPWn4h">
+    <name>Best Of You</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500001</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>3</track-number>
+    <length>255.626000</length>
+    <popularity>0.58343</popularity>
+  </track>
+  <track href="spotify:track:5qst0RIoHJHiGJ5G85bL1H">
+    <name>No Way Back</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500007</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>196.573000</length>
+    <popularity>0.58307</popularity>
+  </track>
+  <track href="spotify:track:7ag6djt26GrEb5nqxHro6U">
+    <name>February Stars</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600045</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>351.453000</length>
+    <popularity>0.58303</popularity>
+  </track>
+  <track href="spotify:track:0oXFp1nd0cDrXutGtwVsou">
+    <name>Next Year</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900009,USRW39900009,USRW39900009</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>276.573000</length>
+    <popularity>0.58037</popularity>
+  </track>
+  <track href="spotify:track:6CZyezhfB1LTc3m4bS9VfD">
+    <name>Big Me</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600042</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>181.826000</length>
+    <popularity>0.57901</popularity>
+  </track>
+  <track href="spotify:track:6qORTBt1D4E31vVvwGOMWD">
+    <name>Friend Of A Friend</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600047</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>13</track-number>
+    <length>241.733000</length>
+    <popularity>0.57884</popularity>
+  </track>
+  <track href="spotify:track:11nbyYbww5673fCwddz3wO">
+    <name>Hell</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500009</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>5</track-number>
+    <length>117.000000</length>
+    <popularity>0.57745</popularity>
+  </track>
+  <track href="spotify:track:063sdqdPeiyfgnHy8dhBQ4">
+    <name>Band On The Run</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700025</id>
+    <album href="spotify:album:7yhmuLXrsrcKvgzbZRjASF">
+      <name>Cheer Up, Boys (Your Make Up Is Running)</name>
+      <released>2008</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV DJ DK DM DO EC EG EH ER ET FJ FK FM FO GA GB GD GE GF GH GI GL GM GN GP GQ GT GU GW GY HK HN HR HT ID IE IL IN IO IQ IR IS JM JO JP KE KG KH KI KM KN KP KR KW KY LA LC LI LK LR LS LU LY MC MD MG MH MK ML MM MN MO MP MQ MR MS MU MV MW MX MY MZ NC NE NI NL NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PW PY QA RE RW SA SB SC SD SE SG SH SI SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TO TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>307.280000</length>
+    <popularity>0.57662</popularity>
+  </track>
+  <track href="spotify:track:70jOArqLlnHwSzQGEerfir">
+    <name>Walking A Line</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30300028</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>235.333000</length>
+    <popularity>0.57503</popularity>
+  </track>
+  <track href="spotify:track:1DV9K7Y8t5IKhOkZfgS5i5">
+    <name>Overdrive</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200010</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>9</track-number>
+    <length>270.466000</length>
+    <popularity>0.57499</popularity>
+  </track>
+  <track href="spotify:track:2jOXKptBDr3VD3tCa0CBER">
+    <name>Gimme Stitches</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900005,USRW39900005,USRW39900005</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>222.200000</length>
+    <popularity>0.57352</popularity>
+  </track>
+  <track href="spotify:track:75w1oY1N8UpQS4eJE8YYb8">
+    <name>M.I.A.</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW39900012,USRW39900012,USRW39900012</id>
+    <album href="spotify:album:4qkCxeT3gbQcj4TWziuUna">
+      <name>There Is Nothing Left To Lose</name>
+      <released>1999</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>11</track-number>
+    <length>243.333000</length>
+    <popularity>0.57301</popularity>
+  </track>
+  <track href="spotify:track:35xAXKI68YDyF2n8Y7WmgU">
+    <name>The Last Song</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500010</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>199.426000</length>
+    <popularity>0.57272</popularity>
+  </track>
+  <track href="spotify:track:0gXZYvZfmmCLz4Wl1rnSs9">
+    <name>Ain't It The Life</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30600055</id>
+    <album href="spotify:album:0nn3RvXC6hjzvSwoBMixg7">
+      <name>Skin And Bones</name>
+      <released>2006</released>
+      <availability>
+        <territories>AR AU BE BO BR BW CH CL CN CO CR CY CZ DE DK DZ EC EE ES FI FR GR GT HK HN HU ID IE IN IT JP KR KZ LB LT LU LV MA MT MX NA NG NI NL NO PA PE PH PL PT PY RO RU SE SG SK SV TN TR UY VE ZA</territories>
+      </availability>
+    </album>
+    <track-number>16</track-number>
+    <length>282.040000</length>
+    <popularity>0.56732</popularity>
+  </track>
+  <track href="spotify:track:0fclM8SV1rJ7zThpZeNLT8">
+    <name>Burn Away</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30200011</id>
+    <album href="spotify:album:6mulYcpWRDAiv7KIouWvyP">
+      <name>ONE BY ONE</name>
+      <released>2002</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>10</track-number>
+    <length>297.600000</length>
+    <popularity>0.56541</popularity>
+  </track>
+  <track href="spotify:track:5XfdAUZlPtofBd9xcHsZFI">
+    <name>Still</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500015</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>313.093000</length>
+    <popularity>0.56315</popularity>
+  </track>
+  <track href="spotify:track:1p9ymlzJSqWOA5qqk5iAva">
+    <name>Resolve</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500012</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>8</track-number>
+    <length>288.640000</length>
+    <popularity>0.56305</popularity>
+  </track>
+  <track href="spotify:track:4Ko63FbAg1VxtjKeT0IgeN">
+    <name>What If I Do?</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30500016</id>
+    <album href="spotify:album:02jqf49ws9bcTvXLPGtjbT">
+      <name>In Your Honour</name>
+      <released>2003</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TR TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>2</track-number>
+    <length>302.906000</length>
+    <popularity>0.56304</popularity>
+  </track>
+  <track href="spotify:track:5q68ehBRWtdidk8IzEmpTp">
+    <name>The Pretender</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700007</id>
+    <album href="spotify:album:2MG8iMen3jb1XBxoTlgVbo">
+      <name>Grammy Nominees 2008</name>
+      <released>2008</released>
+      <availability>
+        <territories>AT AU BE CH CZ DE ES HK HR NL NO NZ PT RU SE SK TW ZA</territories>
+      </availability>
+    </album>
+    <track-number>4</track-number>
+    <length>267.880000</length>
+    <popularity>0.56242</popularity>
+  </track>
+  <track href="spotify:track:1vSqdudgzQlyFNKKtgTwp0">
+    <name>Long Road To Ruin</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW30700010</id>
+    <album href="spotify:album:4w2V9HE4wjAnBjmUvPklcD">
+      <name>Long Road To Ruin</name>
+      <released>2007</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PM PN PR PS PT PW PY QA RE RO RW SA SB SC SD SE SG SH SI SL SM SN SO SR ST SV SY SZ TC TD TF TG TJ TK TL TM TN TO TT TV TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>1</track-number>
+    <length>225.053000</length>
+    <popularity>0.55919</popularity>
+  </track>
+  <track href="spotify:track:4MZkgGlRB4e1ZMQdxZTSEZ">
+    <name>Up In Arms</name>
+    <artist href="spotify:artist:7jy3rLJdDQY21OgRLCZ9sD">
+      <name>Foo Fighters</name>
+    </artist>
+    <id type="isrc">USRW29600006,USRW29600006</id>
+    <album href="spotify:album:6t0KW8iHL9e8Q60nW5KYsR">
+      <name>The Colour And The Shape</name>
+      <released>1997</released>
+      <availability>
+        <territories>AD AE AF AG AI AL AM AN AO AQ AR AT AU AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BW BY BZ CD CF CG CH CI CK CL CM CN CO CR CU CV CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MZ NA NC NE NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VN VU WF WS YE YT ZA ZM ZW</territories>
+      </availability>
+    </album>
+    <track-number>6</track-number>
+    <length>136.733000</length>
+    <popularity>0.55723</popularity>
+  </track>
+</tracks>
