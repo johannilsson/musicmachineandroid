@@ -39,7 +39,8 @@ public class VoteActivity extends Activity implements OnClickListener {
         /*
          * Did this come from spotify?
          */
-        if (getIntent().getAction().equals(Intent.ACTION_SEND)) {
+        
+        if (getIntent().getAction() != null && getIntent().getAction().equals(Intent.ACTION_SEND)) {
         	CharSequence url = getIntent().getCharSequenceExtra(Intent.EXTRA_TEXT);
         	CharSequence subject = getIntent().getCharSequenceExtra(Intent.EXTRA_SUBJECT);
         	
