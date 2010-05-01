@@ -53,12 +53,6 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		Button searchButton = (Button) findViewById(R.id.search_button);
 		searchButton.setOnClickListener(this);
 
-		Button historyButton = (Button) findViewById(R.id.history_button);
-		historyButton.setOnClickListener(this);
-
-		Button preferencesButton = (Button) findViewById(R.id.preferences_button);
-		preferencesButton.setOnClickListener(this);
-
 		currentSongName = (TextView) findViewById(R.id.currentSongName);
 		currentSongArtist = (TextView) findViewById(R.id.currentSongArtist);
 		currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
@@ -161,10 +155,6 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		case R.id.search_button:
 			Intent i = new Intent(this, SearchActivity.class);
 			startActivity(i);
-			break;
-		case R.id.history_button:
-			break;
-		case R.id.preferences_button:
 			break;
 		}
 	}
