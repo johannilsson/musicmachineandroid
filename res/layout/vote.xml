@@ -9,4 +9,9 @@
     android:layout_height="wrap_content" 
     android:text="Vote"
     />
+    <Button
+        android:id="@+id/do_vote_button"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Do Vote" />
 </LinearLayout>
