@@ -69,10 +69,10 @@ public class MusicMachineGateway {
 		List<PlaylistTrack> tracks;
 		String params = "";
 		if (played) {
-			params = "p=played";
+			params = "?p=played";
 		}
 		try {
-			tracks = gson.fromJson(getRequest(String.format("/playlist?%s", params)), collectionType);
+			tracks = gson.fromJson(getRequest(String.format("/playlist%s", params)), collectionType);
 		} catch (JsonParseException e) {
 			throw new IOException(e.getMessage());
 		}
