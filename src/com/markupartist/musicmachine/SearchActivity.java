@@ -66,6 +66,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         i.putExtra("mm.artist", track.getArtist());
         i.putExtra("mm.title",  track.getTitle());
         i.putExtra("mm.album",  track.getAlbum());
+        i.putExtra("mm.length", track.getLength());
         i.putExtra("mm.uri", track.getUri());
         // TODO: mm.length
         

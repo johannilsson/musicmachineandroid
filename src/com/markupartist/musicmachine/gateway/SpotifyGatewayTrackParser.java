@@ -95,6 +95,8 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             isInAlbum = true;
         } else if (name.equals("territories")) {
             startBuffer();
+        } else if (name.equals("length")) {
+            startBuffer();
         } else if (name.equals("name") && isInArtist) {
             startBuffer();
         } else if (name.equals("name") && isInAlbum) {
@@ -127,6 +129,9 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             if(mTextBuffer.indexOf(INCLUDED_COUNTRY_CODE) != -1) {
                 includeTrack = true;
             }
+        } else if (name.equals("length")) {
+            endBuffer();
+            mCurrentTrack.setLength(Double.parseDouble(mTextBuffer.toString()));
         } else if (name.equals("name") && isInArtist) {
             endBuffer();
             mCurrentTrack.setArtist(mTextBuffer.toString());
