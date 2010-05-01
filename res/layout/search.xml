@@ -12,6 +12,7 @@
         android:paddingTop="10dip"
         android:paddingBottom="10dip"
         android:paddingLeft="15dip"
+        android:background="#fff"
         android:paddingRight="15dip">
         <AutoCompleteTextView 
             android:id="@+id/search_text"
