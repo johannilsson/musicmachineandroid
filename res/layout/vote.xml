@@ -4,11 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
+<TextView
+    android:id="@+id/vote_artist"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="Vote"
+    android:text="artist"
     />
+    
+ <TextView
+    android:id="@+id/vote_title"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="title"
+    />
+    
+     <TextView
+    android:id="@+id/vote_length"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="1:54"
+    />
+
     <Button
         android:id="@+id/do_vote_button"
         android:layout_width="fill_parent" 

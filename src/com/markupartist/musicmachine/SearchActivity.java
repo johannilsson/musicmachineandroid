@@ -70,6 +70,11 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         Log.d(TAG, "track: " + track.getArtist());
 
         Intent i = new Intent(this, VoteActivity.class);
+        i.putExtra("mm.artist", track.getArtist());
+        i.putExtra("mm.track",  track.getTitle());
+        i.putExtra("mm.uri", track.getUri());
+        // TODO: mm.length
+        
         startActivity(i);
 
         super.onListItemClick(l, v, position, id);

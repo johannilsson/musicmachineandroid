@@ -22,23 +22,19 @@ import com.markupartist.musicmachine.utils.HttpManager;
  * Copyright: ANARCHY! YEAH!
  */
 public class MusicMachineGateway {
-	private String serverHost = "10.0.2.1";
-	private int serverPort = 8080;
+	private String endpoint = "http://10.0.2.1:8080";
 	Gson gson = new Gson();
-	
-	
 	
 	public MusicMachineGateway() {
 		
 	}
 
-	public MusicMachineGateway(String serverHost, int serverPort) {
-		this.serverHost = serverHost;
-		this.serverPort = serverPort;
+	public MusicMachineGateway(String endpoint) {
+		this.endpoint = endpoint;
 	}
 
 	private String getUrl(String path) {
-		return String.format("http://%s:%s%s", serverHost, serverPort, path);
+		return String.format("%s%s", endpoint, path);
 	}
 	
 	private String getRequest(String path) throws IOException {
