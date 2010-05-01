@@ -53,7 +53,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		Button searchButton = (Button) findViewById(R.id.search_button);
 		searchButton.setOnClickListener(this);
 
-		currentSongName = (TextView) findViewById(R.id.currentSongName);
+		currentSongName = (TextView) findViewById(R.id.currentSongTitle);
 		currentSongArtist = (TextView) findViewById(R.id.currentSongArtist);
 		currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
 		currentSongTime = (TextView) findViewById(R.id.currentSongTime);
