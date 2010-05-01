@@ -108,7 +108,13 @@ public class StatusActivity extends Activity implements OnClickListener {
 
 		@Override
 		public void run() {
-			requestPlaylist();
+			runOnUiThread(new Runnable(){
+
+				@Override
+				public void run() {
+					requestPlaylist();
+				}
+			});
 		}
     }
 }
