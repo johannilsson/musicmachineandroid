@@ -186,9 +186,11 @@ public class VoteActivity extends Activity implements OnClickListener {
                 Toast.makeText(VoteActivity.this, "Thank you!", Toast.LENGTH_SHORT).show();
                 
                 if (mFromShare) {
+                    Log.d("VoteTask", "From share");
                     finish();
                     return;
                 } else {
+                    Log.d("VoteTask", "Votes");
                     Intent i = new Intent(VoteActivity.this, StatusActivity.class);
                     startActivity(i);   
                 }
