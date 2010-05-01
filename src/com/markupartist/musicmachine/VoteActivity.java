@@ -28,6 +28,7 @@ import java.security.NoSuchAlgorithmException;
 public class VoteActivity extends Activity implements OnClickListener {
     private Bundle mExtras;
     private String spotifyUri;
+    private boolean mFromShare = false;
 
 	/** Called when the activity is first created. */
     @Override
@@ -43,6 +44,8 @@ public class VoteActivity extends Activity implements OnClickListener {
         if (getIntent().getAction() != null && getIntent().getAction().equals(Intent.ACTION_SEND)) {
         	CharSequence url = getIntent().getCharSequenceExtra(Intent.EXTRA_TEXT);
         	CharSequence subject = getIntent().getCharSequenceExtra(Intent.EXTRA_SUBJECT);
+        	
+        	mFromShare = true;
         	
         	// subject = "Cobrastyle - Alt. Version - Robyn"
         	
@@ -181,10 +184,17 @@ public class VoteActivity extends Activity implements OnClickListener {
         protected void onPostExecute(Boolean result) {
             if (result == true) {
                 Toast.makeText(VoteActivity.this, "Thank you!", Toast.LENGTH_SHORT).show();
+                
+                if (mFromShare) {
+                    finish();
+                } else {
+                    Intent i = new Intent(VoteActivity.this, StatusActivity.class);
+                    startActivity(i);   
+                }
+                
             } else {
                 Toast.makeText(VoteActivity.this, userErrorMessage, Toast.LENGTH_SHORT).show();
             }
-            
         }
     }
 }
