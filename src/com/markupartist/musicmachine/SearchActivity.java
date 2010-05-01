@@ -6,19 +6,23 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
+import com.markupartist.musicmachine.gateway.SpotifyGateway.Track;
 
 public class SearchActivity extends ListActivity implements OnClickListener, OnEditorActionListener {
     private static final String TAG = "Search";
@@ -56,6 +60,18 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         return false;
     }
 
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Map<String, Object> item = (Map<String, Object>) ((SimpleAdapter)getListAdapter()).getItem(position);
+        SpotifyGateway.Track track = (SpotifyGateway.Track) item.get("track");
+        Log.d(TAG, "track: " + track.getArtist());
+
+        Intent i = new Intent(this, VoteActivity.class);
+        startActivity(i);
+
+        super.onListItemClick(l, v, position, id);
+    }
+
     private void doSearch() {
         String searchText = mSearchView.getText().toString();
         SpotifyGateway gateway = new SpotifyGateway();
@@ -64,14 +80,14 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         setListAdapter(createResultAdapter(searchResult));
     }
 
-    
     private SimpleAdapter createResultAdapter(List<SpotifyGateway.Track> tracks) {
-        ArrayList<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
         for (SpotifyGateway.Track track : tracks) {
-            Map<String, String> map = new HashMap<String, String>();
+            Map<String, Object> map = new HashMap<String, Object>();
             map.put("artist", track.getArtist());
             map.put("title", track.getTitle());
+            map.put("track", track);
             list.add(map);
         }
 
