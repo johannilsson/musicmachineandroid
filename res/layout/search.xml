@@ -9,4 +9,9 @@
     android:layout_height="wrap_content" 
     android:text="Search activity"
     />
+    <Button
+        android:id="@+id/vote_button"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Vote" />
 </LinearLayout>

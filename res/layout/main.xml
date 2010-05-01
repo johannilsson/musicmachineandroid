@@ -4,9 +4,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    <TextView
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/hello"
+        />
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Search" />
 </LinearLayout>
