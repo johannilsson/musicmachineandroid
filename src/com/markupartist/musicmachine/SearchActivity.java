@@ -1,5 +1,6 @@
 package com.markupartist.musicmachine;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.Map;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -18,11 +20,11 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
-import com.markupartist.musicmachine.gateway.SpotifyGateway.Track;
 
 public class SearchActivity extends ListActivity implements OnClickListener, OnEditorActionListener {
     private static final String TAG = "Search";
@@ -74,12 +76,17 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
 
     private void doSearch() {
         String searchText = mSearchView.getText().toString();
-        SpotifyGateway gateway = new SpotifyGateway();
-        List<SpotifyGateway.Track> searchResult = gateway.searchTrack(searchText);
-
-        setListAdapter(createResultAdapter(searchResult));
+        GetTracks trackTask = new GetTracks();
+        trackTask.execute(searchText);
     }
 
+    private void onSearchResult(List<SpotifyGateway.Track> result) {
+        //SpotifyGateway gateway = new SpotifyGateway();
+        //List<SpotifyGateway.Track> searchResult = gateway.searchTrack(searchText);
+
+        setListAdapter(createResultAdapter(result));        
+    }
+    
     private SimpleAdapter createResultAdapter(List<SpotifyGateway.Track> tracks) {
         ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
@@ -115,5 +122,44 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         });
 
         return adapter;
+    }
+
+    /**
+     * Background job for getting {@link SpotifyGateway.Track}s.
+     */
+    private class GetTracks extends AsyncTask<String, Void, List<SpotifyGateway.Track>> {
+        private boolean mWasSuccess = true;
+
+        @Override
+        public void onPreExecute() {
+            //showProgress();
+        }
+
+        @Override
+        protected List<SpotifyGateway.Track> doInBackground(String... params) {
+            try {
+                SpotifyGateway gateway = new SpotifyGateway();
+                List<SpotifyGateway.Track> searchResult = gateway.searchTrack(params[0]);
+
+                return searchResult;
+            } catch (Exception e) {
+                mWasSuccess = false;
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(List<SpotifyGateway.Track> result) {
+            //dismissProgress();
+
+            if (result != null && !result.isEmpty()) {
+                onSearchResult(result);
+            } else if (!mWasSuccess) {
+                //showDialog(DIALOG_GET_SITES_NETWORK_PROBLEM);
+                Toast.makeText(SearchActivity.this, "Network problem...", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(SearchActivity.this, "No result...", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
