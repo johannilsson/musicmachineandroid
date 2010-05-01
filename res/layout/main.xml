@@ -33,6 +33,7 @@
 		android:layout_width="wrap_content" android:id="@+id/currentSongAlbum"></TextView>
 		
 
+
 		    <Button
         android:id="@+id/search_button"
         android:layout_width="fill_parent" 
@@ -48,4 +49,11 @@
         android:shadowRadius="5" 
         android:soundEffectsEnabled="false"/>
 
+<ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:dividerHeight="0.1dip"
+        android:divider="#fff"
+        />
 </LinearLayout>
