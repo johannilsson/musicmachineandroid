@@ -36,6 +36,7 @@
                 android:background="@drawable/btn_search_dialog"
                 />
     </LinearLayout>
+    <include layout="@layout/progress_bar" />
     <ListView
         android:id="@+id/android:list"
         android:layout_width="fill_parent" 
