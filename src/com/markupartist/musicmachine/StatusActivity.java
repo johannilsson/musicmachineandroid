@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,11 +14,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
+import com.markupartist.musicmachine.gateway.MusicMachineGateway.PlaylistTrack;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,9 +29,9 @@ import java.util.TimerTask;
 public class StatusActivity extends Activity implements OnClickListener {
 	private final static String LOG_TAG = StatusActivity.class.getSimpleName();
 	private MusicMachineGateway musicMachineGateway;
-	
-	Timer countdownTimer;
-	Timer statusRequestTimer;
+
+	private SongCountDownTimer countDownTimer = null;
+	private PlaylistRequestTimer playlistRequestTimer;
 	
 	// Widgets
 	private TextView currentSongName;
@@ -56,20 +61,29 @@ public class StatusActivity extends Activity implements OnClickListener {
         currentSongTime = (TextView) findViewById(R.id.currentSongTime);
         
         musicMachineGateway = new MusicMachineGateway();
-        //requestPlaylist();
-        
-        statusRequestTimer = new Timer();
-        statusRequestTimer.scheduleAtFixedRate(new CountdownTask(), 0, 1000);
+        playlistRequestTimer = new PlaylistRequestTimer(10000, 1000);
+        requestPlaylist();
     }
     
-    private void requestPlaylist() {        
-        try {
+    private void requestPlaylist() {
+    	if(null != countDownTimer) {
+    		countDownTimer.cancel();
+    	}
+    	
+    	playlistRequestTimer.cancel();
+    	
+        try {        	
             List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
         	MusicMachineGateway.Status status = musicMachineGateway.getStatus();
             Log.d(LOG_TAG, playlist.toString());
         	updatePlaylistInfo(playlist, status);
         } catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+        	Toast.makeText(this, "Error connecting to server", Toast.LENGTH_SHORT).show();
+        	
+        	// Try again in 10 seconds
+        	playlistRequestTimer.start();
+        	
 			clearCurrentSongInfo();
 		}
     }
@@ -78,39 +92,35 @@ public class StatusActivity extends Activity implements OnClickListener {
     		final List<MusicMachineGateway.PlaylistTrack> playlist,
     		final MusicMachineGateway.Status status) {
     	
-    	runOnUiThread(new Runnable(){
-
-			@Override
-			public void run() {
-				try {
-		        	MusicMachineGateway.PlaylistTrack song = playlist.get(0);
-	
-		        	currentSongName.setText(song.title);
-		        	currentSongArtist.setText(song.artist);
-		        	currentSongAlbum.setText(song.album);
-		        	
-		        	int minutes = status.timeUntilVote / 60000;
-		        	int seconds = status.timeUntilVote % 60000 / 1000;
-		        	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
-				} catch (IndexOutOfBoundsException e) {
-					e.printStackTrace();
-		        	clearCurrentSongInfo();
-				}
-			}
-    	});
+    	Log.d(LOG_TAG, "Updating UI with " + playlist.size() + " songs.");    	
+    	
+		if(playlist.size() > 0) {
+			Iterator<PlaylistTrack> it = playlist.iterator();
+			
+			// Update current song
+        	MusicMachineGateway.PlaylistTrack song = it.next();
+        	currentSongName.setText(song.title);
+        	currentSongArtist.setText(song.artist);
+        	currentSongAlbum.setText(song.album);
+        	currentSongTime.setText("");
+        	
+        	countDownTimer = new SongCountDownTimer(status.timeUntilVote, 1000); 
+        	countDownTimer.start();
+        	
+        	// Update playlist
+        	while(it.hasNext()) {
+        		song = it.next();
+        	}
+		} else {
+			clearCurrentSongInfo();
+		}
     }
     
     private void clearCurrentSongInfo() {
-    	runOnUiThread(new Runnable() {
-
-			@Override
-			public void run() {
-		    	currentSongName.setText("");
-		    	currentSongArtist.setText("");
-		    	currentSongAlbum.setText("");
-		    	currentSongTime.setText("");
-			}
-    	});
+    	currentSongName.setText("");
+    	currentSongArtist.setText("");
+    	currentSongAlbum.setText("");
+    	currentSongTime.setText("");
     }
     
     @Override
@@ -142,11 +152,36 @@ public class StatusActivity extends Activity implements OnClickListener {
         return super.onOptionsItemSelected(item);
     }
     
-    private class CountdownTask extends TimerTask {
-
+    private class SongCountDownTimer extends CountDownTimer {
+    	public SongCountDownTimer(long millisInFuture, long countDownInterval) {
+    		super(millisInFuture, countDownInterval);
+        }
+    	
 		@Override
-		public void run() {
+		public void onFinish() {
 			requestPlaylist();
 		}
+
+		@Override
+		public void onTick(long millisUntilFinished) {
+			int minutes = (int) (millisUntilFinished / 60000);
+        	int seconds = (int) (millisUntilFinished % 60000 / 1000);
+        	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
+		}
+    }
+    
+    private class PlaylistRequestTimer extends CountDownTimer {
+    	public PlaylistRequestTimer(long millisInFuture, long countDownInterval) {
+    		super(millisInFuture, countDownInterval);
+        }
+    	
+		@Override
+		public void onFinish() {
+			requestPlaylist();
+		}
+
+		@Override
+		public void onTick(long millisUntilFinished) {}
+    	
     }
 }
