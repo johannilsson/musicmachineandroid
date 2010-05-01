@@ -1,11 +1,5 @@
 package com.markupartist.musicmachine;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,18 +9,16 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.TextView.OnEditorActionListener;
-
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
 import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SearchActivity extends ListActivity implements OnClickListener, OnEditorActionListener {
     private static final String TAG = "Search";
@@ -107,16 +99,18 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("artist", track.getArtist());
             map.put("title", track.getTitle());
+            map.put("album", track.getAlbum());
             map.put("track", track);
             list.add(map);
         }
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, 
                 R.layout.track_row,
-                new String[] { "artist", "title" },
+                new String[] { "artist", "title", "album" },
                 new int[] { 
                     R.id.artist,
-                    R.id.title
+                    R.id.title,
+                    R.id.album
                 }
         );
 
@@ -126,6 +120,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
                     String textRepresentation) {
                 switch (view.getId()) {
                 case R.id.artist:
+                case R.id.album:
                 case R.id.title:
                     ((TextView)view).setText(textRepresentation);
                     return true;
@@ -138,7 +133,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     }
 
     /**
-     * Background job for getting {@link SpotifyGateway.Track}s.
+     * Background job for getting {@link SpotifyGatewayTrack}s.
      */
     private class GetTracks extends AsyncTask<String, Void, List<SpotifyGatewayTrack>> {
         private boolean mWasSuccess = true;

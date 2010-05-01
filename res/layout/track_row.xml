@@ -3,17 +3,43 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:padding="5dip"
+    android:background="@drawable/list_selector_background"
     >
-<TextView  
-    android:id="@+id/artist"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Vote"
-    />
 <TextView  
     android:id="@+id/title"
     android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Vote"
+    android:layout_height="wrap_content"
+    android:textSize="18dip"
+    android:text="Title"
+    android:textColor="#000"
     />
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="5dip"
+    >
+	<TextView  
+	    android:id="@+id/artist"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:text="Artist"
+	    android:textColor="#000"
+	    />
+    <TextView  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="-"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        />
+    <TextView  
+        android:id="@+id/album"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Album"
+        android:textColor="#000"
+        />
+    </LinearLayout>
 </LinearLayout>

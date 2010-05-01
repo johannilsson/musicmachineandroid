@@ -30,7 +30,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class SpotifyGatewayTrackParser extends DefaultHandler {
-    private static final String TAG = "StopFinder";
+    private static final String TAG = "SpotifyGatewayTrackParser";
+    private static final String INCLUDED_COUNTRY_CODE = "SE";
+
     private StringBuilder mTextBuffer = null;
     boolean mIsBuffering = false;
     private ArrayList<SpotifyGatewayTrack> mTracks = new ArrayList<SpotifyGatewayTrack>();
@@ -38,8 +40,9 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
     private boolean isInArtist = false;
     private boolean isInAlbum = false;
     private boolean isInTrack = false;
+    private boolean includeTrack = false;
 
-    public ArrayList<SpotifyGatewayTrack> parseTracks(InputSource input) {
+    public ArrayList<SpotifyGatewayTrack> parseTracks(InputSource input) throws SpotifyGatewayParseException {
         mTracks.clear();
         try {
             SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -50,10 +53,13 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             xr.parse(input);
         } catch (IOException e) {
             Log.e(TAG, e.toString());
+            throw new SpotifyGatewayParseException();
         } catch (SAXException e) {
             Log.e(TAG, e.toString());
+            throw new SpotifyGatewayParseException();
         } catch (ParserConfigurationException e) {
             Log.e(TAG, e.toString());
+            throw new SpotifyGatewayParseException();
         }
 
         return mTracks;
@@ -87,6 +93,8 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             isInArtist = true;
         } else if (name.equals("album")) {
             isInAlbum = true;
+        } else if (name.equals("territories")) {
+            startBuffer();
         } else if (name.equals("name") && isInArtist) {
             startBuffer();
         } else if (name.equals("name") && isInAlbum) {
@@ -104,20 +112,28 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
 
     public void endElement(String uri, String name, String qName)
                 throws SAXException {
-        if (name.trim().equals("track")) {
+        if (name.equals("track")) {
             isInTrack = false;
-            mTracks.add(mCurrentTrack);
+            if(includeTrack) {
+                mTracks.add(mCurrentTrack);
+            }
+            includeTrack = false;
         } else if (name.equals("artist")) {
             isInArtist = false;
         } else if (name.equals("album")) {
             isInAlbum = false;
-        } else if (name.trim().equals("name") && isInArtist) {
+        } else if (name.equals("territories")) {
+            endBuffer();
+            if(mTextBuffer.indexOf(INCLUDED_COUNTRY_CODE) != -1) {
+                includeTrack = true;
+            }
+        } else if (name.equals("name") && isInArtist) {
             endBuffer();
             mCurrentTrack.setArtist(mTextBuffer.toString());
-        } else if (name.trim().equals("name") && isInAlbum) {
+        } else if (name.equals("name") && isInAlbum) {
             endBuffer();
             mCurrentTrack.setAlbum(mTextBuffer.toString());
-        } else if (name.trim().equals("name") && isInTrack) {
+        } else if (name.equals("name") && isInTrack) {
             endBuffer();
             mCurrentTrack.setTitle(mTextBuffer.toString());
         }
@@ -131,4 +147,6 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
     private void endBuffer() {
         mIsBuffering = false;
     }
+
+    public class SpotifyGatewayParseException extends Exception {}
 }
