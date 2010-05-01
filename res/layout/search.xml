@@ -36,14 +36,11 @@
                 android:background="@drawable/btn_search_dialog"
                 />
     </LinearLayout>
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Search activity"
-    />
-    <Button
-        android:id="@+id/vote_button"
+    <ListView
+        android:id="@+id/android:list"
         android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:text="Vote" />
+        android:layout_height="fill_parent"
+        android:dividerHeight="0.1dip"
+        android:divider="#4A4A4A"
+        />
 </LinearLayout>
