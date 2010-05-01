@@ -34,8 +34,31 @@ public class VoteActivity extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vote);
-        
         mExtras = getIntent().getExtras();
+
+        /*
+         * Did this come from spotify?
+         */
+        if (getIntent().getAction().equals(Intent.ACTION_SEND)) {
+        	CharSequence url = getIntent().getCharSequenceExtra(Intent.EXTRA_TEXT);
+        	CharSequence subject = getIntent().getCharSequenceExtra(Intent.EXTRA_SUBJECT);
+        	
+        	// subject = "Cobrastyle - Alt. Version - Robyn"
+        	
+        	int li = subject.toString().lastIndexOf("-");
+
+        	String title = subject.subSequence(0, li-1).toString();
+        	String artist = subject.subSequence(li+2, subject.length()).toString();
+        	
+        	String id = url.subSequence(url.toString().lastIndexOf("/")+1, url.length()).toString();
+        	String uri = "spotify:track:" + id;
+        	
+        	mExtras.putString("mm.artist", artist);
+        	mExtras.putString("mm.title", title);
+        	mExtras.putString("mm.uri", uri);
+        	//Toast.makeText(this, String.format("%s, %s (%s) (%s)", artist, title, url, uri), Toast.LENGTH_LONG).show();
+        }
+        
         spotifyUri = mExtras.getString("mm.uri");
      
         TextView artistView = (TextView) findViewById(R.id.vote_artist);
