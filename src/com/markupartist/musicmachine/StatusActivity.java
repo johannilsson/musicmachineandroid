@@ -64,30 +64,50 @@ public class StatusActivity extends Activity implements OnClickListener {
             List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
         	MusicMachineGateway.Status status = musicMachineGateway.getStatus();
             Log.d(LOG_TAG, playlist.toString());
-        	MusicMachineGateway.PlaylistTrack song = playlist.get(0);
-        	
-        	currentSongName.setText(song.title);
-        	currentSongArtist.setText(song.artist);
-        	currentSongAlbum.setText(song.album);
-        	
-        	int minutes = status.timeUntilVote / 60000;
-        	int seconds = status.timeUntilVote % 60000 / 1000;
-        	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
-        	
-        } catch (IndexOutOfBoundsException e) {
-			e.printStackTrace();
-        	clearCurrentSongInfo();
+        	updatePlaylistInfo(playlist, status);
         } catch (IOException e) {
 			e.printStackTrace();
 			clearCurrentSongInfo();
 		}
     }
     
+    private void updatePlaylistInfo(
+    		final List<MusicMachineGateway.PlaylistTrack> playlist,
+    		final MusicMachineGateway.Status status) {
+    	
+    	runOnUiThread(new Runnable(){
+
+			@Override
+			public void run() {
+				try {
+		        	MusicMachineGateway.PlaylistTrack song = playlist.get(0);
+	
+		        	currentSongName.setText(song.title);
+		        	currentSongArtist.setText(song.artist);
+		        	currentSongAlbum.setText(song.album);
+		        	
+		        	int minutes = status.timeUntilVote / 60000;
+		        	int seconds = status.timeUntilVote % 60000 / 1000;
+		        	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
+				} catch (IndexOutOfBoundsException e) {
+					e.printStackTrace();
+		        	clearCurrentSongInfo();
+				}
+			}
+    	});
+    }
+    
     private void clearCurrentSongInfo() {
-    	currentSongName.setText("");
-    	currentSongArtist.setText("");
-    	currentSongAlbum.setText("");
-    	currentSongTime.setText("");
+    	runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+		    	currentSongName.setText("");
+		    	currentSongArtist.setText("");
+		    	currentSongAlbum.setText("");
+		    	currentSongTime.setText("");
+			}
+    	});
     }
     
     @Override
@@ -108,13 +128,7 @@ public class StatusActivity extends Activity implements OnClickListener {
 
 		@Override
 		public void run() {
-			runOnUiThread(new Runnable(){
-
-				@Override
-				public void run() {
-					requestPlaylist();
-				}
-			});
+			requestPlaylist();
 		}
     }
 }
