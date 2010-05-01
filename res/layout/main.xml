@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"><RelativeLayout android:layout_height="wrap_content" android:background="@drawable/button_dark" android:paddingLeft="5pt" android:layout_width="fill_parent" android:paddingTop="3pt" android:paddingBottom="3pt"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/currentSongTime" android:id="@+id/currentSongTitle" android:text="Title" android:textColor="#ffffff" android:textStyle="bold" android:layout_alignParentTop="true" android:textSize="18px"></TextView><TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/currentSongArtist" android:text="Artist" android:textColor="#ffffff" android:layout_below="@+id/currentSongTitle"></TextView>
+<LinearLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical">
+	
+
+	<RelativeLayout android:layout_height="wrap_content"
+		android:background="@drawable/button_dark" android:paddingLeft="5pt"
+		android:layout_width="fill_parent" android:paddingTop="3pt"
+		android:paddingBottom="3pt">
+		
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@+id/currentSongTime"
+			android:id="@+id/currentSongTitle" android:text="Title"
+			android:textColor="#ffffff" android:textStyle="bold"
+			android:layout_alignParentTop="true" android:textSize="18px"></TextView>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/currentSongArtist"
+			android:text="Artist" android:textColor="#ffffff"
+			android:layout_below="@+id/currentSongTitle"></TextView>
 
 
-</RelativeLayout><TextView android:text="@+id/TextView01" android:layout_height="wrap_content" android:layout_below="@+id/currentSongAlbum" android:layout_width="wrap_content" android:id="@+id/currentSongTime"></TextView><TextView android:text="@+id/TextView01" android:layout_height="wrap_content" android:layout_below="@+id/currentSongArtist" android:layout_width="wrap_content" android:id="@+id/currentSongAlbum"></TextView><ListView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/currentSongTime" android:id="@+id/android:list"></ListView><Button android:layout_height="wrap_content" android:layout_below="@+id/currentSongName" android:id="@+id/search_button" android:text="Vote" android:layout_width="fill_parent" android:textColor="#ffffff"></Button>
+	</RelativeLayout>
 
+		<TextView android:text="@+id/TextView01"
+		android:layout_height="wrap_content" android:layout_below="@+id/currentSongAlbum"
+		android:layout_width="wrap_content" android:id="@+id/currentSongTime"></TextView>
 
+	<TextView android:text="@+id/TextView02"
+		android:layout_height="wrap_content" android:layout_below="@+id/currentSongArtist"
+		android:layout_width="wrap_content" android:id="@+id/currentSongAlbum"></TextView>
+		
 
-
-
-
-
-
-
+		    <Button
+        android:id="@+id/search_button"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:text="VOTE!" 
+        android:textColor="#ffffff" 
+        android:textSize="28px" 
+        android:textStyle="bold" 
+        android:shadowColor="#111111" 
+        android:background="@drawable/button_green" 
+        android:shadowDx="0" 
+        android:shadowDy="1" 
+        android:shadowRadius="5" 
+        android:soundEffectsEnabled="false"/>
 
 </LinearLayout>
