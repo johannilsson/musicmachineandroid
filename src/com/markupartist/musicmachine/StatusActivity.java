@@ -63,6 +63,10 @@ public class StatusActivity extends Activity implements OnClickListener {
         musicMachineGateway = new MusicMachineGateway();
         playlistRequestTimer = new PlaylistRequestTimer(10000, 1000);
         requestPlaylist();
+
+        SpotifyGateway gateway = new SpotifyGateway();
+        List<SpotifyGateway.Track> searchResult = gateway.searchTrack("Foo");
+        Log.d("FOO", searchResult.get(0).toString());
     }
     
     @Override
