@@ -38,7 +38,7 @@
     		android:shadowDx="0" 
     		android:shadowDy="1" 
     		android:shadowRadius="3" 
-    		android:textSize="28px" 
+    		android:textSize="28dip" 
     		android:typeface="sans"/>
     		
     		</TableRow>
@@ -57,7 +57,7 @@
     			android:id="@+id/vote_artist"
     			android:layout_width="fill_parent" 
     			android:layout_height="wrap_content" 
-    			android:text="artist" android:textSize="18px" android:textColor="#ffffff" android:layout_gravity="center_vertical"/>
+    			android:text="artist" android:textSize="18dip" android:textColor="#ffffff" android:layout_gravity="center_vertical"/>
     		    
            </TableRow>
            
@@ -75,7 +75,7 @@
     			android:layout_width="fill_parent" 
     			android:layout_height="wrap_content" 
     			android:text="disc"
-    			android:textSize="18px" android:textColor="#ffffff" android:layout_gravity="center_vertical"
+    			android:textSize="18dip" android:textColor="#ffffff" android:layout_gravity="center_vertical"
     			/>
     		    
            </TableRow>
@@ -93,7 +93,7 @@
     		android:layout_width="fill_parent" 
     		android:layout_height="wrap_content" 
     		android:text="1:54"
-    		android:textSize="18px" android:textColor="#ffffff" android:layout_gravity="center_vertical"
+    		android:textSize="18dip" android:textColor="#ffffff" android:layout_gravity="center_vertical"
     		/>
     		
     		    </TableRow>
@@ -126,7 +126,7 @@
     android:layout_height="wrap_content" 
     android:text="Preview Song" 
     android:textColor="#ffffff" 
-    android:textSize="20px" 
+    android:textSize="20dip" 
     android:textStyle="bold" 
     android:layout_alignParentBottom="false" 
     android:background="@drawable/btn_dark_background" 
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content" 
         android:text="Do Vote" 
         android:textColor="#ffffff" 
-        android:textSize="28px" 
+        android:textSize="28dip" 
         android:textStyle="bold" 
         android:shadowColor="#111111" 
         android:background="@drawable/btn_green_background" 
