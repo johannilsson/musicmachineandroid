@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -75,6 +76,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     }
 
     private void doSearch() {
+        LinearLayout progressBar = (LinearLayout) findViewById(R.id.search_progress);
+        progressBar.setVisibility(View.VISIBLE);
+        
         String searchText = mSearchView.getText().toString();
         GetTracks trackTask = new GetTracks();
         trackTask.execute(searchText);
@@ -84,6 +88,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         //SpotifyGateway gateway = new SpotifyGateway();
         //List<SpotifyGateway.Track> searchResult = gateway.searchTrack(searchText);
 
+        LinearLayout progressBar = (LinearLayout) findViewById(R.id.search_progress);
+        progressBar.setVisibility(View.GONE);
+        
         setListAdapter(createResultAdapter(result));        
     }
     
