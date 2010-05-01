@@ -87,11 +87,11 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             isInArtist = true;
         } else if (name.equals("album")) {
             isInAlbum = true;
-        } else if (name.equals("name") && isInTrack) {
-            startBuffer();
         } else if (name.equals("name") && isInArtist) {
             startBuffer();
         } else if (name.equals("name") && isInAlbum) {
+            startBuffer();
+        } else if (name.equals("name") && isInTrack) {
             startBuffer();
         }
     }
@@ -111,15 +111,15 @@ public class SpotifyGatewayTrackParser extends DefaultHandler {
             isInArtist = false;
         } else if (name.equals("album")) {
             isInAlbum = false;
-        } else if (name.trim().equals("name") && isInTrack) {
-            endBuffer();
-            mCurrentTrack.setTitle(mTextBuffer.toString());
         } else if (name.trim().equals("name") && isInArtist) {
             endBuffer();
             mCurrentTrack.setArtist(mTextBuffer.toString());
         } else if (name.trim().equals("name") && isInAlbum) {
             endBuffer();
             mCurrentTrack.setAlbum(mTextBuffer.toString());
+        } else if (name.trim().equals("name") && isInTrack) {
+            endBuffer();
+            mCurrentTrack.setTitle(mTextBuffer.toString());
         }
     }
 
