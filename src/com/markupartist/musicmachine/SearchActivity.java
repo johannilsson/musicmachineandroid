@@ -99,16 +99,18 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("artist", track.getArtist());
             map.put("title", track.getTitle());
+            map.put("album", track.getAlbum());
             map.put("track", track);
             list.add(map);
         }
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, 
                 R.layout.track_row,
-                new String[] { "artist", "title" },
+                new String[] { "artist", "title", "album" },
                 new int[] { 
                     R.id.artist,
-                    R.id.title
+                    R.id.title,
+                    R.id.album
                 }
         );
 
@@ -118,6 +120,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
                     String textRepresentation) {
                 switch (view.getId()) {
                 case R.id.artist:
+                case R.id.album:
                 case R.id.title:
                     ((TextView)view).setText(textRepresentation);
                     return true;
