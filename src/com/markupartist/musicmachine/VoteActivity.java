@@ -38,7 +38,7 @@ public class VoteActivity extends Activity implements OnClickListener {
         TextView titleView = (TextView) findViewById(R.id.vote_title);
         titleView.setText(mExtras.getString("mm.title"));
         
-        TextView lengthView = (TextView) findViewById(R.id.vote_title);
+        TextView lengthView = (TextView) findViewById(R.id.vote_length);
         lengthView.setText("1:43");
         
         Button searchButton = (Button) findViewById(R.id.do_vote_button);
@@ -116,7 +116,7 @@ public class VoteActivity extends Activity implements OnClickListener {
         @Override
         protected void onPostExecute(Boolean result) {
             if (result == true) {
-                Toast.makeText(VoteActivity.this, "Network problem...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VoteActivity.this, "Vote addedd successfully...", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(VoteActivity.this, "Failed to vote...", Toast.LENGTH_SHORT).show();
             }
