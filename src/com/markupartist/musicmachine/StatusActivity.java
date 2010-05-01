@@ -16,6 +16,12 @@ public class StatusActivity extends Activity implements OnClickListener {
 
         Button searchButton = (Button) findViewById(R.id.search_button);
         searchButton.setOnClickListener(this);
+        
+        Button historyButton = (Button) findViewById(R.id.history_button);
+        historyButton.setOnClickListener(this);
+        
+        Button preferencesButton = (Button) findViewById(R.id.preferences_button);
+        preferencesButton.setOnClickListener(this);
     }
 
     @Override
@@ -25,7 +31,10 @@ public class StatusActivity extends Activity implements OnClickListener {
             Intent i = new Intent(this, SearchActivity.class);
             startActivity(i);
             break;
+        case R.id.history_button:
+        	break;
+        case R.id.preferences_button:
+        	break;
         }
-        
     }
 }

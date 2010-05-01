@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <TextView
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:text="@string/hello"
-        />
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:text="Search" />
-</LinearLayout>
+
+<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"><TextView android:layout_height="wrap_content" android:layout_below="@+id/ImageView01" android:layout_width="wrap_content" android:id="@+id/currentSongName" android:text="Current Song" android:textStyle="bold" android:textSize="24dip"></TextView><Button android:layout_height="wrap_content" android:layout_below="@+id/currentSongName" android:layout_width="wrap_content" android:text="Search" android:id="@+id/search_button"></Button><Button android:text="@+id/Button02" android:layout_height="wrap_content" android:layout_below="@+id/Button01" android:layout_width="wrap_content" android:id="@+id/history_button"></Button><Button android:text="@+id/Button03" android:layout_height="wrap_content" android:layout_below="@+id/Button02" android:layout_width="wrap_content" android:id="@+id/preferences_button"></Button><GridView android:layout_height="wrap_content" android:layout_below="@+id/currentSongName" android:id="@+id/GridView01" android:layout_width="wrap_content"></GridView><ImageView android:id="@+id/ImageView01" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageView>
+
+
+
+
+
+</RelativeLayout>
