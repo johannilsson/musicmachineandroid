@@ -10,6 +10,8 @@ import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
@@ -20,7 +22,7 @@ import com.markupartist.musicmachine.utils.HttpManager;
  * Copyright: ANARCHY! YEAH!
  */
 public class MusicMachineGateway {
-	private String serverHost = "192.168.6.142";
+	private String serverHost = "10.0.2.1";
 	private int serverPort = 8080;
 	Gson gson = new Gson();
 	
@@ -38,14 +40,27 @@ public class MusicMachineGateway {
 	}
 	
 	private String getRequest(String path) throws IOException {
-		HttpGet statusGet = new HttpGet(getUrl(path));
-		HttpResponse r = HttpManager.execute(statusGet);
+		HttpGet get = new HttpGet(getUrl(path));
+		HttpResponse r = HttpManager.execute(get);
         if (r.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
             throw new IOException("A remote server error occurred");
         }
         return this.convertStreamToString(r.getEntity().getContent());
 	}
 	
+	private String postRequest(String path, String data) throws IOException, ConflictException {
+		HttpPost post = new HttpPost(getUrl(path));
+		post.setEntity(new StringEntity(data));
+		HttpResponse r = HttpManager.execute(post);
+        if (r.getStatusLine().getStatusCode() == 409) {
+        	throw new ConflictException();
+        }
+        else if (r.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
+            throw new IOException("A remote server error occurred");
+        }
+        return this.convertStreamToString(r.getEntity().getContent());
+	}
+
 	public Status getStatus() throws IOException {
 		Status s = gson.fromJson(getRequest("/status"), Status.class);
 		return s;
@@ -73,12 +88,16 @@ public class MusicMachineGateway {
 		return _getPlaylist(true);
 	}
 	
-	public void vote(String trackUri, String userId) {
+	public void vote(String trackUri, String userId) throws IOException, UserHasAlreadyVotedException {
 		vote(new Vote(trackUri, userId));
 	}
 	
-	public void vote(Vote vote) {
-		
+	public void vote(Vote vote) throws IOException, UserHasAlreadyVotedException {
+		try {
+			postRequest("/vote", gson.toJson(vote));
+		} catch (ConflictException e) {
+			throw new UserHasAlreadyVotedException();
+		}
 	}
 	
 	private String convertStreamToString(InputStream is) throws IOException {
@@ -133,4 +152,7 @@ public class MusicMachineGateway {
 		public String track;
 		public String user;
 	}
+	
+	static public class ConflictException extends Exception {}
+	static public class UserHasAlreadyVotedException extends Exception {}
 }
