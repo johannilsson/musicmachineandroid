@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class StatusActivity extends Activity implements OnClickListener {
         searchButton.setOnClickListener(this);
 
         SpotifyGateway gateway = new SpotifyGateway();
-        List<SpotifyGateway.Track> searchResult = gateway.searchTrack("Foo");
+        List<SpotifyGatewayTrack> searchResult = gateway.searchTrack("Foo");
         Log.d("FOO", searchResult.get(0).toString());
 
     }

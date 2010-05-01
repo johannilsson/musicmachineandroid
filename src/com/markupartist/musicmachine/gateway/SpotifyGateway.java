@@ -11,11 +11,11 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class SpotifyGateway {
-    public List<Track> searchTrack(String searchTerm)
+    public List<SpotifyGatewayTrack> searchTrack(String searchTerm)
     {
-        List<Track> searchResult = new ArrayList<Track>();
+        List<SpotifyGatewayTrack> searchResult = new ArrayList<SpotifyGatewayTrack>();
 
-        SpotifyGateway.Track mockedTrack = new SpotifyGateway.Track("Kaizers Orchestra", "Prosessen", "Våre Demoner", "spotify:title:5S9edTU6BpUmp0enwiYoZ6");
+        SpotifyGatewayTrack mockedTrack = new SpotifyGatewayTrack("Kaizers Orchestra", "Prosessen", "Våre Demoner", "spotify:title:5S9edTU6BpUmp0enwiYoZ6");
         searchResult.add(mockedTrack);
 
         return searchResult;
@@ -98,66 +98,5 @@ public class SpotifyGateway {
 
         return searchResult;
         */
-    }
-
-    public class Track {
-        private String artist;
-        private String title;
-        private String album;
-        private String uri;
-
-        public Track()
-        {
-        }
-
-        public Track(String artistName, String title, String albumName, String uri)
-        {
-            this.artist = artistName;
-            this.title = title;
-            this.album = albumName;
-            this.uri = uri;
-        }
-
-        public String getArtist() {
-            return artist;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getAlbum() {
-            return album;
-        }
-
-        public String getUri() {
-            return uri;
-        }
-
-        public void setArtist(String artist) {
-            this.artist = artist;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public void setAlbum(String album) {
-            this.album = album;
-        }
-
-        public void setUri(String uri) {
-            this.uri = uri;
-        }
-
-        @Override
-        public String toString() {
-            return "Track{" +
-                    "artist='" + artist + '\'' +
-                    ", title='" + title + '\'' +
-                    ", album='" + album + '\'' +
-                    ", uri='" + uri + '\'' +
-                    '}';
-        }
     }
 }

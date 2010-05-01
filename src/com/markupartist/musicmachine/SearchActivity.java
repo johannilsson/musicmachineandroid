@@ -26,6 +26,7 @@ import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
 
 public class SearchActivity extends ListActivity implements OnClickListener, OnEditorActionListener {
     private static final String TAG = "Search";
@@ -66,7 +67,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Map<String, Object> item = (Map<String, Object>) ((SimpleAdapter)getListAdapter()).getItem(position);
-        SpotifyGateway.Track track = (SpotifyGateway.Track) item.get("track");
+        SpotifyGatewayTrack track = (SpotifyGatewayTrack) item.get("track");
         Log.d(TAG, "track: " + track.getArtist());
 
         Intent i = new Intent(this, VoteActivity.class);
@@ -89,7 +90,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         trackTask.execute(searchText);
     }
 
-    private void onSearchResult(List<SpotifyGateway.Track> result) {
+    private void onSearchResult(List<SpotifyGatewayTrack> result) {
         //SpotifyGateway gateway = new SpotifyGateway();
         //List<SpotifyGateway.Track> searchResult = gateway.searchTrack(searchText);
 
@@ -99,10 +100,10 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         setListAdapter(createResultAdapter(result));        
     }
     
-    private SimpleAdapter createResultAdapter(List<SpotifyGateway.Track> tracks) {
+    private SimpleAdapter createResultAdapter(List<SpotifyGatewayTrack> tracks) {
         ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
-        for (SpotifyGateway.Track track : tracks) {
+        for (SpotifyGatewayTrack track : tracks) {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("artist", track.getArtist());
             map.put("title", track.getTitle());
@@ -139,7 +140,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     /**
      * Background job for getting {@link SpotifyGateway.Track}s.
      */
-    private class GetTracks extends AsyncTask<String, Void, List<SpotifyGateway.Track>> {
+    private class GetTracks extends AsyncTask<String, Void, List<SpotifyGatewayTrack>> {
         private boolean mWasSuccess = true;
 
         @Override
@@ -148,10 +149,10 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         }
 
         @Override
-        protected List<SpotifyGateway.Track> doInBackground(String... params) {
+        protected List<SpotifyGatewayTrack> doInBackground(String... params) {
             try {
                 SpotifyGateway gateway = new SpotifyGateway();
-                List<SpotifyGateway.Track> searchResult = gateway.searchTrack(params[0]);
+                List<SpotifyGatewayTrack> searchResult = gateway.searchTrack(params[0]);
 
                 return searchResult;
             } catch (Exception e) {
@@ -161,7 +162,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         }
 
         @Override
-        protected void onPostExecute(List<SpotifyGateway.Track> result) {
+        protected void onPostExecute(List<SpotifyGatewayTrack> result) {
             //dismissProgress();
 
             if (result != null && !result.isEmpty()) {
