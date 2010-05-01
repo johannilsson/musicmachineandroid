@@ -8,15 +8,32 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.markupartist.musicmachine.gateway.MusicMachineGateway;
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
 
 import java.util.List;
 
 public class StatusActivity extends Activity implements OnClickListener {
+	private final static String LOG_TAG = StatusActivity.class.getSimpleName();
+	private SpotifyGateway gateway;
+	private MusicMachineGateway musicMachineGateway;
+	
+	// Widgets
+	private TextView currentSongName;
+	private TextView currentSongArtist;
+	private TextView currentSongAlbum;
+	private TextView currentSongTime;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        gateway = new SpotifyGateway();
+        musicMachineGateway = new MusicMachineGateway();
+        
         setContentView(R.layout.main);
 
         Button searchButton = (Button) findViewById(R.id.search_button);
@@ -24,10 +41,39 @@ public class StatusActivity extends Activity implements OnClickListener {
         
         Button historyButton = (Button) findViewById(R.id.history_button);
         historyButton.setOnClickListener(this);
-        SpotifyGateway gateway = new SpotifyGateway();
-        List<SpotifyGateway.Track> searchResult = gateway.searchTrack("Foo");
         
-        Log.d("FOO", searchResult.get(0).toString());
+        Button preferencesButton = (Button) findViewById(R.id.preferences_button);
+        preferencesButton.setOnClickListener(this);
+        
+        currentSongName = (TextView) findViewById(R.id.currentSongName);
+        currentSongArtist = (TextView) findViewById(R.id.currentSongArtist);
+        currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
+        currentSongTime = (TextView) findViewById(R.id.currentSongTime);
+        
+        requestPlaylist();
+    }
+    
+    private void requestPlaylist() {
+        List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
+    	MusicMachineGateway.Status status = musicMachineGateway.getStatus();
+        Log.d(LOG_TAG, playlist.toString());
+        
+        try {
+        	MusicMachineGateway.PlaylistTrack song = playlist.get(0);
+        	
+        	currentSongName.setText(song.title);
+        	currentSongArtist.setText(song.artist);
+        	currentSongAlbum.setText(song.album);
+        	
+        	int minutes = status.timeUntilVote / 60000;
+        	int seconds = status.timeUntilVote % 60000 / 1000;
+        	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
+        	
+        } catch (IndexOutOfBoundsException e) {
+        	currentSongName.setText("");
+        	currentSongArtist.setText("");
+        	currentSongAlbum.setText("");
+        }
     }
 
     @Override
