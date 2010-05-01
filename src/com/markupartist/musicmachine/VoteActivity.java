@@ -187,6 +187,7 @@ public class VoteActivity extends Activity implements OnClickListener {
                 
                 if (mFromShare) {
                     finish();
+                    return;
                 } else {
                     Intent i = new Intent(VoteActivity.this, StatusActivity.class);
                     startActivity(i);   
