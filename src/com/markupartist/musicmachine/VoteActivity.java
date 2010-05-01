@@ -20,6 +20,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway.UserHasAlreadyVotedException;
+import com.markupartist.musicmachine.gateway.SpotifyGateway;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrackParser;
 
 import java.io.IOException;
 import java.security.MessageDigest;
@@ -56,11 +59,22 @@ public class VoteActivity extends Activity implements OnClickListener {
         	
         	String id = url.subSequence(url.toString().lastIndexOf("/")+1, url.length()).toString();
         	String uri = "spotify:track:" + id;
-        	
+
         	mExtras.putString("mm.artist", artist);
         	mExtras.putString("mm.title", title);
         	mExtras.putString("mm.album", "-");
         	mExtras.putString("mm.uri", uri);
+        	mExtras.putDouble("mm.length", 0.0);
+
+            SpotifyGateway spotifyGateway = new SpotifyGateway();
+            try {
+                SpotifyGatewayTrack spotifyTrack = spotifyGateway.lookup(uri);
+                mExtras.putString("mm.album", spotifyTrack.getAlbum());
+                mExtras.putDouble("mm.length", spotifyTrack.getLength());
+            } catch (Exception e) {
+                Log.e("VoteActivity", "Failed to lookup spotify track", e);
+                // do nothing
+            }
         	//Toast.makeText(this, String.format("%s, %s (%s) (%s)", artist, title, url, uri), Toast.LENGTH_LONG).show();
         }
         

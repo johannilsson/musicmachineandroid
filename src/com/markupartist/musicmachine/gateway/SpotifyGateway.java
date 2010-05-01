@@ -48,5 +48,37 @@ public class SpotifyGateway {
         return searchResult;
     }
 
+    public SpotifyGatewayTrack lookup(String spotifyUri) throws SpotifyGatewayException, SpotifyGatewayTrackParser.SpotifyGatewayParseException {
+        List<SpotifyGatewayTrack> searchResult;
+        HttpGet searchHttpGet = new HttpGet("http://ws.spotify.com/lookup/1/?uri=" + URLEncoder.encode(spotifyUri));
+
+        HttpResponse response = null;
+        try {
+            response = HttpManager.execute(searchHttpGet);
+        } catch (IOException e) {
+            Log.e(TAG, "HttpManager.execute", e);
+            throw new SpotifyGatewayException();
+        }
+
+        InputStream responseContentStream = null;
+        try {
+            responseContentStream = response.getEntity().getContent();
+        } catch (IOException e) {
+            Log.e(TAG, "getContent", e);
+            throw new SpotifyGatewayException();
+        }
+
+        SpotifyGatewayTrackParser parser = new SpotifyGatewayTrackParser();
+        searchResult = parser.parseTracks(new InputSource(responseContentStream));
+
+
+        if(searchResult.size() > 0)
+        {
+            return searchResult.get(0);
+        } else {
+            throw new SpotifyGatewayException();
+        }
+    }
+
     public class SpotifyGatewayException extends Exception {}
 }
