@@ -120,7 +120,7 @@
     android:id="@+id/vote_record" 
     android:baselineAlignBottom="true" 
     android:src="@drawable/record" 
-    android:paddingTop="40px" android:layout_gravity="bottom|center_horizontal" android:layout_width="wrap_content"></ImageView>
+    android:layout_gravity="bottom|center_horizontal" android:layout_width="wrap_content" android:paddingTop="80px"></ImageView>
     </LinearLayout>
     <Button android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
