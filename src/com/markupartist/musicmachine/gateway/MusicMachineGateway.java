@@ -26,6 +26,8 @@ public class MusicMachineGateway {
 	private int serverPort = 8080;
 	Gson gson = new Gson();
 	
+	
+	
 	public MusicMachineGateway() {
 		
 	}
