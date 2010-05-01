@@ -21,7 +21,7 @@ import java.util.List;
 public class SpotifyGateway {
     private static String TAG = "SpotifyGateway";
 
-    public List<SpotifyGatewayTrack> searchTrack(String searchTerm) throws SpotifyGatewayTrackParser.SpotifyGatewayParseException {
+    public List<SpotifyGatewayTrack> searchTrack(String searchTerm) throws SpotifyGatewayTrackParser.SpotifyGatewayParseException, SpotifyGatewayException {
         List<SpotifyGatewayTrack> searchResult;
 
         HttpGet searchHttpGet = new HttpGet("http://ws.spotify.com/search/1/track.xml?q=" + URLEncoder.encode(searchTerm));
@@ -31,6 +31,7 @@ public class SpotifyGateway {
             response = HttpManager.execute(searchHttpGet);
         } catch (IOException e) {
             Log.e(TAG, "HttpManager.execute", e);
+            throw new SpotifyGatewayException();
         }
 
         InputStream responseContentStream = null;
@@ -38,6 +39,7 @@ public class SpotifyGateway {
             responseContentStream = response.getEntity().getContent();
         } catch (IOException e) {
             Log.e(TAG, "getContent", e);
+            throw new SpotifyGatewayException();
         }
 
         SpotifyGatewayTrackParser parser = new SpotifyGatewayTrackParser();
@@ -45,4 +47,6 @@ public class SpotifyGateway {
 
         return searchResult;
     }
+
+    public class SpotifyGatewayException extends Exception {}
 }
