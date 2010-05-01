@@ -67,6 +67,7 @@ public class VoteActivity extends Activity implements OnClickListener {
         	mExtras.putString("mm.title", title);
         	mExtras.putString("mm.album", "-");
         	mExtras.putString("mm.uri", uri);
+        	mExtras.putDouble("mm.length", 0.0);
 
             SpotifyGateway spotifyGateway = new SpotifyGateway();
             try {
