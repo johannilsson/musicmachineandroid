@@ -73,21 +73,32 @@ public class StatusActivity extends Activity implements OnClickListener {
     
     @Override
     public void onDestroy() {
-    	if(null != countDownTimer) {
-    		countDownTimer.cancel();
-    	}
-    	
-    	playlistRequestTimer.cancel();
-    	
+    	cancelTimers();
     	super.onDestroy();
     }
     
-    private void requestPlaylist() {
+    @Override
+    public void onPause() {
+    	cancelTimers();
+    	super.onPause();
+    }
+    
+    @Override
+    public void onResume() {
+    	super.onResume();
+    	requestPlaylist();
+    }
+    
+    private void cancelTimers() {
     	if(null != countDownTimer) {
     		countDownTimer.cancel();
     	}
     	
     	playlistRequestTimer.cancel();
+    }
+    
+    private void requestPlaylist() {
+    	cancelTimers();
     	
         try {        	
             List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
@@ -130,6 +141,9 @@ public class StatusActivity extends Activity implements OnClickListener {
         	}
 		} else {
 			clearCurrentSongInfo();
+			
+        	// Try again in 10 seconds
+        	playlistRequestTimer.start();
 		}
     }
     
