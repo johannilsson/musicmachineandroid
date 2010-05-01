@@ -4,42 +4,70 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    <LinearLayout android:layout_width="wrap_content" 
-	android:layout_height="wrap_content" 
-	android:id="@+id/LinearLayout01" 
-	android:layout_above="@+id/do_vote_button">
-<TextView
-    android:id="@+id/vote_artist"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="artist"
-    />
     
- <TextView
-    android:id="@+id/vote_title"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="title"
-    />
+   <LinearLayout android:id="@+id/LinearLayout01" 
+	                  android:layout_above="@+id/do_vote_button" 
+	                  android:layout_height="fill_parent" 
+	                  android:orientation="vertical" 
+	                  android:layout_width="fill_parent">
+ 
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
     
-     <TextView
-    android:id="@+id/vote_length"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="1:54"
-    />
-</LinearLayout>
-<LinearLayout android:layout_width="wrap_content" 
+    		<TableRow>
+			<TextView
+    			android:id="@+id/vote_artist"
+    			android:layout_width="fill_parent" 
+    			android:layout_height="wrap_content" 
+    			android:text="artist"
+    			/>
+    		    </TableRow>
+    <TableRow>
+			 <TextView
+    		android:id="@+id/vote_title"
+   			android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="title"
+    		/>
+    		    </TableRow>
+    <TableRow>
+     		<TextView
+    		android:id="@+id/vote_length"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="1:54"
+    		/>
+    		
+    		    </TableRow>
+</TableLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1" 
+      android:background="#dfdfdf" android:layout_gravity="bottom|center_horizontal">
+
+   <ImageView android:layout_height="wrap_content" 
+    android:background="@drawable/record" 
+    android:id="@+id/vote_record" 
+    android:baselineAlignBottom="false" 
+    android:layout_width="wrap_content"></ImageView>
+
+ </LinearLayout>
+</LinearLayout>    
+
+
+
+<LinearLayout android:layout_width="fill_parent" 
 	android:layout_height="wrap_content" 
 	android:id="@+id/LinearLayout01" 
 	android:layout_alignParentBottom="true" 
-	android:layout_above="@+id/do_vote_button">
+	android:layout_above="@+id/do_vote_button" android:orientation="vertical">
 
-    <ImageView android:layout_height="wrap_content" 
-    android:background="@drawable/record" 
-    android:layout_width="wrap_content" 
-    android:id="@+id/vote_record" 
-    android:baselineAlignBottom="false"></ImageView>
+
     
     <Button android:id="@+id/Button01" 
     android:layout_width="fill_parent" 
