@@ -124,6 +124,7 @@ public class VoteActivity extends Activity implements OnClickListener {
      */
     private class VoteTask extends AsyncTask<String, Void, Boolean> {
         private boolean mWasSuccess = true;
+        private String userErrorMessage = "";
 
         @Override
         public void onPreExecute() {
@@ -161,11 +162,11 @@ public class VoteActivity extends Activity implements OnClickListener {
                 mmGateway.vote(mExtras.getString("mm.uri"), userId);
             } catch (IOException e) {
                 // TODO Auto-generated catch block
-                e.printStackTrace();
+                userErrorMessage = "Opps, the music machine is gone!";
                 return false;
             } catch (UserHasAlreadyVotedException e) {
                 // TODO Auto-generated catch block
-                e.printStackTrace();
+                userErrorMessage = "You have already voted, you have to wait until song.";
                 return false;
             }
 
@@ -175,9 +176,9 @@ public class VoteActivity extends Activity implements OnClickListener {
         @Override
         protected void onPostExecute(Boolean result) {
             if (result == true) {
-                Toast.makeText(VoteActivity.this, "Vote addedd successfully...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VoteActivity.this, "Thank you!", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(VoteActivity.this, "Failed to vote...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VoteActivity.this, userErrorMessage, Toast.LENGTH_SHORT).show();
             }
             
         }
