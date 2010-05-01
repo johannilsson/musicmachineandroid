@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="dom4j">
+  <library name="gson">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/dom4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-1.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
