@@ -65,6 +65,17 @@ public class StatusActivity extends Activity implements OnClickListener {
         requestPlaylist();
     }
     
+    @Override
+    public void onDestroy() {
+    	if(null != countDownTimer) {
+    		countDownTimer.cancel();
+    	}
+    	
+    	playlistRequestTimer.cancel();
+    	
+    	super.onDestroy();
+    }
+    
     private void requestPlaylist() {
     	if(null != countDownTimer) {
     		countDownTimer.cancel();
