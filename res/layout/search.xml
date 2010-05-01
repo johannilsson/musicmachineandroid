@@ -4,14 +4,43 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Search activity"
-    />
-    <Button
-        android:id="@+id/vote_button"
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+        <AutoCompleteTextView 
+            android:id="@+id/search_text"
+            android:dropDownWidth="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textColor="#000"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:inputType="text"
+            android:background="@drawable/textfield_search"
+            />
+        <ImageButton
+                android:id="@+id/btn_search"
+                android:src="@android:drawable/ic_search_category_default"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:background="@drawable/btn_search_dialog"
+                />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/android:list"
         android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:text="Vote" />
+        android:layout_height="fill_parent"
+        android:dividerHeight="0.1dip"
+        android:divider="#4A4A4A"
+        />
 </LinearLayout>
