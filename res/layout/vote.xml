@@ -3,8 +3,11 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    
     >
+    <LinearLayout android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/LinearLayout01" 
+	android:layout_above="@+id/do_vote_button">
 <TextView
     android:id="@+id/vote_artist"
     android:layout_width="fill_parent" 
@@ -25,16 +28,48 @@
     android:layout_height="wrap_content" 
     android:text="1:54"
     />
+</LinearLayout>
+<LinearLayout android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/LinearLayout01" 
+	android:layout_alignParentBottom="true" 
+	android:layout_above="@+id/do_vote_button">
 
-     
-    <ImageView android:layout_height="wrap_content" android:background="@drawable/record" android:layout_width="wrap_content" android:id="@+id/vote_record" android:baselineAlignBottom="false"></ImageView><Button android:id="@+id/Button01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Preview Song" android:textColor="#ffffff" android:textSize="20px" android:textStyle="bold" android:layout_alignParentBottom="false" android:background="@drawable/button_dark"></Button>
+    <ImageView android:layout_height="wrap_content" 
+    android:background="@drawable/record" 
+    android:layout_width="wrap_content" 
+    android:id="@+id/vote_record" 
+    android:baselineAlignBottom="false"></ImageView>
+    
+    <Button android:id="@+id/Button01" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Preview Song" 
+    android:textColor="#ffffff" 
+    android:textSize="20px" 
+    android:textStyle="bold" 
+    android:layout_alignParentBottom="false" 
+    android:background="@drawable/button_dark" 
+    android:layout_above="@+id/do_vote_button"></Button>
     
     <Button
         android:id="@+id/do_vote_button"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
-        android:text="Do Vote" android:textColor="#ffffff" android:textSize="28px" android:textStyle="bold" android:shadowColor="#111111" android:shadowRadius="3" android:shadowDy="3" android:shadowDx="3" android:layout_alignParentBottom="true" android:background="@drawable/button_green"/>
+        android:text="Do Vote" 
+        android:textColor="#ffffff" 
+        android:textSize="28px" 
+        android:textStyle="bold" 
+        android:shadowColor="#111111" 
+        android:background="@drawable/button_green" 
+        android:shadowDx="0" 
+        android:shadowDy="1" 
+        android:shadowRadius="5" 
+        android:soundEffectsEnabled="false"/>
 
+</LinearLayout>
+
+     
 
 
 </RelativeLayout>
