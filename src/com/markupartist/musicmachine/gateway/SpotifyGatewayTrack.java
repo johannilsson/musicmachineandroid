@@ -12,17 +12,10 @@ public class SpotifyGatewayTrack {
     private String title;
     private String album;
     private String uri;
+    private double length;
 
     public SpotifyGatewayTrack()
     {
-    }
-
-    public SpotifyGatewayTrack(String artistName, String title, String albumName, String uri)
-    {
-        this.artist = artistName;
-        this.title = title;
-        this.album = albumName;
-        this.uri = uri;
     }
 
     public String getArtist() {
@@ -55,6 +48,14 @@ public class SpotifyGatewayTrack {
 
     public void setUri(String uri) {
         this.uri = uri;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
     }
 
     @Override

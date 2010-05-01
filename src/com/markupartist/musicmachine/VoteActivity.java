@@ -72,7 +72,10 @@ public class VoteActivity extends Activity implements OnClickListener {
         albumView.setText(mExtras.getString("mm.album"));
         
         TextView lengthView = (TextView) findViewById(R.id.vote_length);
-        lengthView.setText("1:43");
+        double length = mExtras.getDouble("mm.length");
+        int minutes = (int) (length / 60);
+        int seconds = (int) (length % 60);
+        lengthView.setText(String.format("%d:%02d", minutes, seconds));
         
         Button searchButton = (Button) findViewById(R.id.do_vote_button);
         searchButton.setOnClickListener(this);
