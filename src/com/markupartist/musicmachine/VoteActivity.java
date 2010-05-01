@@ -23,7 +23,8 @@ public class VoteActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
         case R.id.do_vote_button:
-            Toast.makeText(this, "VOTE VOTE!", Toast.LENGTH_SHORT).show();
+            String userId = android.provider.Settings.Secure.ANDROID_ID;
+            Toast.makeText(this, "VOTE user id: " + userId, Toast.LENGTH_SHORT).show();
             break;
         }
         
