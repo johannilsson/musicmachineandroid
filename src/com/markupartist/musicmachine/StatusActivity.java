@@ -27,8 +27,8 @@ public class StatusActivity extends Activity implements OnClickListener {
 
         SpotifyGateway gateway = new SpotifyGateway();
         List<SpotifyGateway.Track> searchResult = gateway.searchTrack("Foo");
-
         Log.d("FOO", searchResult.get(0).toString());
+
     }
 
     @Override
