@@ -38,6 +38,11 @@
                 android:background="@drawable/btn_search_dialog"
                 />
     </LinearLayout>
+    <ImageView
+        android:id="@+id/start_here"
+        android:src="@drawable/start_here"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" />        
     <include layout="@layout/progress_bar" />
     <ListView
         android:id="@+id/android:list"

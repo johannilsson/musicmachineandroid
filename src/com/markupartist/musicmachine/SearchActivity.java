@@ -76,6 +76,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     }
 
     private void doSearch() {
+        ImageView startHereView = (ImageView) findViewById(R.id.start_here);
+        startHereView.setVisibility(View.GONE);
+
         LinearLayout progressBar = (LinearLayout) findViewById(R.id.search_progress);
         progressBar.setVisibility(View.VISIBLE);
         
