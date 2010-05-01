@@ -13,12 +13,17 @@ import android.widget.TextView;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
 import com.markupartist.musicmachine.gateway.SpotifyGateway;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class StatusActivity extends Activity implements OnClickListener {
 	private final static String LOG_TAG = StatusActivity.class.getSimpleName();
-	private SpotifyGateway gateway;
 	private MusicMachineGateway musicMachineGateway;
+	
+	Timer countdownTimer;
+	Timer statusRequestTimer;
 	
 	// Widgets
 	private TextView currentSongName;
@@ -30,10 +35,7 @@ public class StatusActivity extends Activity implements OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        gateway = new SpotifyGateway();
-        musicMachineGateway = new MusicMachineGateway();
-        
+                
         setContentView(R.layout.main);
 
         Button searchButton = (Button) findViewById(R.id.search_button);
@@ -50,15 +52,18 @@ public class StatusActivity extends Activity implements OnClickListener {
         currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
         currentSongTime = (TextView) findViewById(R.id.currentSongTime);
         
-        requestPlaylist();
+        musicMachineGateway = new MusicMachineGateway();
+        //requestPlaylist();
+        
+        statusRequestTimer = new Timer();
+        statusRequestTimer.scheduleAtFixedRate(new CountdownTask(), 0, 1000);
     }
     
-    private void requestPlaylist() {
-        List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
-    	MusicMachineGateway.Status status = musicMachineGateway.getStatus();
-        Log.d(LOG_TAG, playlist.toString());
-        
+    private void requestPlaylist() {        
         try {
+            List<MusicMachineGateway.PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
+        	MusicMachineGateway.Status status = musicMachineGateway.getStatus();
+            Log.d(LOG_TAG, playlist.toString());
         	MusicMachineGateway.PlaylistTrack song = playlist.get(0);
         	
         	currentSongName.setText(song.title);
@@ -70,12 +75,21 @@ public class StatusActivity extends Activity implements OnClickListener {
         	currentSongTime.setText(String.format("%d:%02d", minutes, seconds));
         	
         } catch (IndexOutOfBoundsException e) {
-        	currentSongName.setText("");
-        	currentSongArtist.setText("");
-        	currentSongAlbum.setText("");
-        }
+			e.printStackTrace();
+        	clearCurrentSongInfo();
+        } catch (IOException e) {
+			e.printStackTrace();
+			clearCurrentSongInfo();
+		}
     }
-
+    
+    private void clearCurrentSongInfo() {
+    	currentSongName.setText("");
+    	currentSongArtist.setText("");
+    	currentSongAlbum.setText("");
+    	currentSongTime.setText("");
+    }
+    
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -88,5 +102,13 @@ public class StatusActivity extends Activity implements OnClickListener {
         case R.id.preferences_button:
         	break;
         }
+    }
+    
+    private class CountdownTask extends TimerTask {
+
+		@Override
+		public void run() {
+			requestPlaylist();
+		}
     }
 }
