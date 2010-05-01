@@ -43,6 +43,9 @@ public class VoteActivity extends Activity implements OnClickListener {
         
         TextView titleView = (TextView) findViewById(R.id.vote_title);
         titleView.setText(mExtras.getString("mm.title"));
+
+        TextView albumView = (TextView) findViewById(R.id.vote_disc);
+        albumView.setText(mExtras.getString("mm.album"));
         
         TextView lengthView = (TextView) findViewById(R.id.vote_length);
         lengthView.setText("1:43");
