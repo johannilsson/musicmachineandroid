@@ -2,8 +2,10 @@ package com.markupartist.musicmachine;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -57,7 +59,10 @@ public class StatusActivity extends Activity implements OnClickListener {
         currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
         currentSongTime = (TextView) findViewById(R.id.currentSongTime);
         
-        musicMachineGateway = new MusicMachineGateway();
+        //musicMachineGateway = new MusicMachineGateway();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String endpoint = sharedPreferences.getString("server_url", "http://10.0.2.1:8080");
+        musicMachineGateway = new MusicMachineGateway(endpoint);
         playlistRequestTimer = new PlaylistRequestTimer(10000, 1000);
         requestPlaylist();
 
