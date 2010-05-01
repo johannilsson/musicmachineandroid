@@ -1,9 +1,13 @@
 package com.markupartist.musicmachine;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
@@ -167,16 +171,33 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 				.get("track");
 		Log.d(TAG, "track: " + track.toString());
 
-		Intent i = new Intent(this, VoteActivity.class);
-		i.putExtra("mm.artist", track.artist);
-		i.putExtra("mm.title", track.title);
-		i.putExtra("mm.uri", track.uri);
-		// TODO: mm.length
-
-		startActivity(i);
+        try {
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(track.uri));
+            startActivity(i);
+        } catch (ActivityNotFoundException e) {
+            showDialog(0);
+        }
 
 		super.onListItemClick(l, v, position, id);
 	}
+
+    @Override
+    public Dialog onCreateDialog(int id)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        switch(id)
+        {
+            case 0:
+            {
+                builder.setTitle("Spotify not found");
+                builder.setMessage("Spotify is needed to preview a song, please download it from the Android Market");
+                builder.setPositiveButton("OK", null);
+            }
+        }
+
+        return builder.create();
+    }
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
