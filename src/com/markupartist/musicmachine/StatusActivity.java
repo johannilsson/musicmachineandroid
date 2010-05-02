@@ -8,8 +8,10 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
@@ -25,6 +27,7 @@ import android.widget.Toast;
 import android.widget.SimpleAdapter.ViewBinder;
 
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
+import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway.PlaylistTrack;
 
 import java.io.IOException;
@@ -33,13 +36,19 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class StatusActivity extends ListActivity implements OnClickListener {
+	private final static Integer RECONNECT_DELAY = 5; // Seconds
 	private final static String TAG = StatusActivity.class.getSimpleName();
 	private MusicMachineGateway musicMachineGateway;
 
 	private SongCountDownTimer countDownTimer = null;
-	private PlaylistRequestTimer playlistRequestTimer;
+	private GetPlaylistTask getPlaylistTask;
+	private GetStatusTask getStatusTask;
+	private Handler handler = new Handler();
+	private ConnectTask connectTask = new ConnectTask();
 
 	// Widgets
 	private TextView currentSongName;
@@ -68,81 +77,51 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		String endpoint = sharedPreferences.getString("server_url",
 				"http://10.0.2.1:8080");
 		musicMachineGateway = new MusicMachineGateway(endpoint);
-		playlistRequestTimer = new PlaylistRequestTimer(10000, 1000);
-		requestPlaylist();
+		
+		// Connect to the server
+		handler.post(connectTask);
 	}
 
 	@Override
 	public void onDestroy() {
+		handler.removeCallbacks(connectTask);
+		
+		if(null != getPlaylistTask) {
+			getPlaylistTask.cancel(true);
+		}
+		
+		if(null != getStatusTask) {
+			getStatusTask.cancel(true);
+		}
+		
 		cancelTimers();
+		
 		super.onDestroy();
 	}
-
-	@Override
-	public void onPause() {
-		cancelTimers();
-		super.onPause();
-	}
-
-	@Override
-	public void onResume() {
-		super.onResume();
-		requestPlaylist();
-	}
-
+	
 	private void cancelTimers() {
 		if (null != countDownTimer) {
 			countDownTimer.cancel();
 		}
-
-		playlistRequestTimer.cancel();
 	}
 
 	private void requestPlaylist() {
-		cancelTimers();
-
-		try {
-			List<PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
-			MusicMachineGateway.Status status = musicMachineGateway.getStatus();
-			Log.d(TAG, playlist.toString());
-			updatePlaylistInfo(playlist, status);
-		} catch (IOException e) {
-			// e.printStackTrace();
-			Toast.makeText(this, "Error connecting to server",
-					Toast.LENGTH_SHORT).show();
-
-			// Try again in 10 seconds
-			playlistRequestTimer.start();
-
-			clearCurrentSongInfo();
+		if(null == getPlaylistTask || getPlaylistTask.getStatus() == AsyncTask.Status.FINISHED) {
+			getPlaylistTask = new GetPlaylistTask();
+		}
+		
+		if(getPlaylistTask.getStatus() != AsyncTask.Status.RUNNING) {
+			getPlaylistTask.execute();
 		}
 	}
-
-	private void updatePlaylistInfo(
-			final List<PlaylistTrack> playlist,
-			final MusicMachineGateway.Status status) {
-
-		Log.d(TAG, "Updating UI with " + playlist.size() + " songs.");
-
-		if (playlist.size() > 0) {
-			Iterator<PlaylistTrack> it = playlist.iterator();
-
-			// Update current song
-			PlaylistTrack song = it.next();
-			currentSongName.setText(song.title);
-			currentSongArtist.setText(song.artist);
-			currentSongAlbum.setText(song.album);
-			currentSongTime.setText("");
-
-			countDownTimer = new SongCountDownTimer(status.timeUntilVote, 1000);
-			countDownTimer.start();
-
-			setListAdapter(createPlaylistAdapter(playlist.subList(1, playlist.size())));
-		} else {
-			clearCurrentSongInfo();
-
-			// Try again in 10 seconds
-			playlistRequestTimer.start();
+	
+	private void requestStatus() {
+		if(null == getStatusTask || getStatusTask.getStatus() == AsyncTask.Status.FINISHED) {
+			getStatusTask = new GetStatusTask();
+		}
+		
+		if(getStatusTask.getStatus() != AsyncTask.Status.RUNNING) {
+			getStatusTask.execute();
 		}
 	}
 
@@ -182,14 +161,11 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	}
 
     @Override
-    public Dialog onCreateDialog(int id)
-    {
+    public Dialog onCreateDialog(int id) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        switch(id)
-        {
-            case 0:
-            {
+        switch(id) {
+            case 0: {
                 builder.setTitle("Spotify not found");
                 builder.setMessage("Spotify is needed to preview a song, please download it from the Android Market");
                 builder.setPositiveButton("OK", null);
@@ -232,21 +208,6 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		}
 	}
 
-	private class PlaylistRequestTimer extends CountDownTimer {
-		public PlaylistRequestTimer(long millisInFuture, long countDownInterval) {
-			super(millisInFuture, countDownInterval);
-		}
-
-		@Override
-		public void onFinish() {
-			requestPlaylist();
-		}
-
-		@Override
-		public void onTick(long millisUntilFinished) {
-		}
-	}
-
 	private SimpleAdapter createPlaylistAdapter(List<PlaylistTrack> tracks) {
 		ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
@@ -278,5 +239,109 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		});
 
 		return adapter;
+	}
+
+	private class GetPlaylistTask extends AsyncTask<Void, Void, List<PlaylistTrack>> {
+
+		@Override
+		protected List<PlaylistTrack> doInBackground(Void... args) {
+			try {
+				List<PlaylistTrack> playlist = musicMachineGateway.getPlaylist();
+				return playlist;
+			} catch (IOException e) {
+				Log.d(TAG, "Error fetching playlist");
+				return null;
+			}
+		}
+
+        @Override
+        protected void onPostExecute(List<PlaylistTrack> result) {
+            //dismissProgress();
+
+            if (result != null) {
+                onPlaylistReceived(result);
+            } else {
+            	onPlaylistError();
+            }
+        }
+	}
+	
+	private void onPlaylistError() {
+		clearCurrentSongInfo();
+		connectTask.schedule(handler, RECONNECT_DELAY);
+	}
+	
+	private void onPlaylistReceived(List<PlaylistTrack> playlist) {
+		Log.d(TAG, "Updating UI with " + playlist.size() + " songs.");
+
+		if (playlist.size() > 0) {
+			PlaylistTrack song = playlist.get(0);
+			currentSongName.setText(song.title);
+			currentSongArtist.setText(song.artist);
+			currentSongAlbum.setText(song.album);
+			currentSongTime.setText("");
+
+			setListAdapter(createPlaylistAdapter(playlist.subList(1, playlist.size())));
+		} else {
+			clearCurrentSongInfo();
+			setListAdapter(createPlaylistAdapter(playlist));
+		}
+	}
+	
+	private class GetStatusTask extends AsyncTask<Void, Void, MusicMachineGateway.Status> {
+
+		@Override
+		protected MusicMachineGateway.Status doInBackground(Void... args) {
+			try {
+				MusicMachineGateway.Status status = musicMachineGateway.getStatus();
+				return status;
+			} catch (IOException e) {
+				Log.d(TAG, "Error fetching status");
+				return null;
+			}
+		}
+
+        @Override
+        protected void onPostExecute(MusicMachineGateway.Status result) {
+            //dismissProgress();
+
+            if (result != null) {
+                onStatusReceived(result);
+            } else {
+            	onStatusError();
+            }
+        }
+	}
+	
+	private void onStatusReceived(MusicMachineGateway.Status status) {
+		countDownTimer = new SongCountDownTimer(status.timeUntilVote, 1000);
+		countDownTimer.start();
+	}
+	
+	private void onStatusError() {
+		connectTask.schedule(handler, RECONNECT_DELAY);
+	}
+	
+	class ConnectTask extends TimerTask {
+		private boolean isScheduled = false;
+		
+		public void schedule(Handler handler, int seconds) {
+			if(false == isScheduled) {
+				Log.d(TAG, "Reconnecting in " + seconds + " seconds.");
+				isScheduled = true;
+				handler.removeCallbacks(this);
+				handler.postDelayed(this, seconds * 1000);
+			}
+		}
+		
+		public void run() {
+			isScheduled = false;
+			
+			// These calls will launch asynchronous requests to the server
+			// so there's no need to worry that ConnectTask is executed on
+			// the UI thread.
+			requestPlaylist();
+			requestStatus();
+		}
 	}
 }
