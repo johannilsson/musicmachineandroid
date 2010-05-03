@@ -3,4 +3,7 @@
   <item android:id="@+id/myprefspane" 
         android:title="Settings" 
         android:icon="@drawable/icon"/>
+  <item android:id="@+id/discover" 
+        android:title="Discover" 
+        android:icon="@android:drawable/ic_menu_view"/>
 </menu>

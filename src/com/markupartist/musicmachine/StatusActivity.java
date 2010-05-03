@@ -39,6 +39,9 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+
 public class StatusActivity extends ListActivity implements OnClickListener {
 	private final static Integer RECONNECT_DELAY = 5; // Seconds
 	private final static String TAG = StatusActivity.class.getSimpleName();
@@ -72,14 +75,18 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		currentSongTime = (TextView) findViewById(R.id.currentSongTime);
 
 		// musicMachineGateway = new MusicMachineGateway();
+		setupGateway();
+		
+		// Connect to the server
+		handler.post(connectTask);
+	}
+
+	private void setupGateway() {
 		SharedPreferences sharedPreferences = PreferenceManager
 				.getDefaultSharedPreferences(this);
 		String endpoint = sharedPreferences.getString("server_url",
 				"http://10.0.2.1:8080");
 		musicMachineGateway = new MusicMachineGateway(endpoint);
-		
-		// Connect to the server
-		handler.post(connectTask);
 	}
 
 	@Override
@@ -104,6 +111,30 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 			countDownTimer.cancel();
 		}
 	}
+
+	private void findServer() {
+        try {
+            JmDNS jmdns = JmDNS.create();
+                ServiceInfo[] infos = jmdns.list("_http._tcp.local.");
+                for (int i=0; i < infos.length; i++) {
+                	// the service name is optional really, we shouldn't do this
+                	if (infos[i].getName().equalsIgnoreCase("musicmachine")) {
+                		// write new config. We're not supposed to do this either since
+                		// we're supposed to be dynamic when using mdns
+                		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                		sharedPreferences.edit().putString("server_url", String.format("http://%s:%d", infos[i].getHostAddress(), infos[i].getPort())).commit();
+                		setupGateway();
+                		Toast.makeText(this, "Found server!", Toast.LENGTH_SHORT).show();
+                	}
+                }
+                System.out.println();
+        } catch (IOException e) {
+        	Toast.makeText(this, "Error while searching: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    	Toast.makeText(this, "No server found", Toast.LENGTH_SHORT).show();
+		
+	}
+
 
 	private void requestPlaylist() {
 		if(null == getPlaylistTask || getPlaylistTask.getStatus() == AsyncTask.Status.FINISHED) {
@@ -185,6 +216,9 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		switch (item.getItemId()) {
 		case R.id.myprefspane:
 			startActivity(new Intent(this, PrefsActivity.class));
+			return true;
+		case R.id.discover:
+			findServer();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
