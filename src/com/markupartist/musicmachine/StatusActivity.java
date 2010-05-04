@@ -271,24 +271,22 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 
 		for (PlaylistTrack track : tracks) {
 			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("artist", track.artist);
-			map.put("title", track.title);
+			map.put("artist_title", String.format("%s • %s", track.artist, track.title));
 			map.put("track", track);
 
 			list.add(map);
 		}
 
 		SimpleAdapter adapter = new SimpleAdapter(this, list,
-				R.layout.simple_track_row, new String[] {"artist", "title",},
-				new int[] { R.id.artist, R.id.title });
+				R.layout.simple_track_row, new String[] {"artist_title",},
+				new int[] { R.id.artist_title });
 
 		adapter.setViewBinder(new ViewBinder() {
 			@Override
 			public boolean setViewValue(View view, Object data,
 					String textRepresentation) {
 				switch (view.getId()) {
-                case R.id.artist:
-                case R.id.title:
+                case R.id.artist_title:
                     ((TextView)view).setText(textRepresentation);
                     return true;
                 }
