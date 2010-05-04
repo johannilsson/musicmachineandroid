@@ -44,6 +44,22 @@
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent" />        
     <include layout="@layout/progress_bar" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_no_result"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        >
+        <TextView android:id="@+id/search_no_result_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:textColor="?android:attr/textColorPrimary"
+            android:text="No result..."
+            />
+    </LinearLayout>
     <ListView
         android:id="@+id/android:list"
         android:layout_width="fill_parent" 
