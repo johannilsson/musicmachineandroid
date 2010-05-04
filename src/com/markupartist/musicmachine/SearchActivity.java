@@ -124,6 +124,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
 
         for (SpotifyGatewayTrack track : tracks) {
             Map<String, Object> map = new HashMap<String, Object>();
+            map.put("title", track.getTitle());
             map.put("artist_album", String.format("%s • %s", track.getArtist(), track.getAlbum()));
             map.put("track", track);
             list.add(map);
@@ -131,9 +132,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, 
                 R.layout.track_row,
-                new String[] { "artist_album", },
+                new String[] { "title", "artist_album", },
                 new int[] { 
-                    R.id.artist_album,
+                    R.id.title, R.id.artist_album,
                 }
         );
 
@@ -142,6 +143,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
             public boolean setViewValue(View view, Object data,
                     String textRepresentation) {
                 switch (view.getId()) {
+                case R.id.title:
                 case R.id.artist_album:
                     ((TextView)view).setText(textRepresentation);
                     return true;
