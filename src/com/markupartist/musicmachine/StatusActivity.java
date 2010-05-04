@@ -335,11 +335,15 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 				List<LastFMGatewayAlbum> albums = lastFMGateway.searchAlbum(song.artist, song.album);
 				if (albums != null && albums.size() > 0) {
 				    ImageLoader.getInstance().load(albumArtView, albums.get(0).coverURL, true, R.drawable.android_cover_small, null);
+				} else {
+					albumArtView.setImageResource(R.drawable.android_cover_small);
 				}
 			} catch (LastFMGatewayException e) {
 				Log.e(TAG, e.toString());
+				albumArtView.setImageResource(R.drawable.android_cover_small);
 			} catch (LastFMGatewayParseException e) {
 				Log.e(TAG, e.toString());
+				albumArtView.setImageResource(R.drawable.android_cover_small);
 			}
 			
 			currentSongName.setText(song.title);
