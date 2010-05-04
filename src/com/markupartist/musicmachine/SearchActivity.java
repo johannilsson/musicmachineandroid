@@ -88,12 +88,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
     }
 
     private void onSearchResult(List<SpotifyGatewayTrack> result) {
-        //SpotifyGateway gateway = new SpotifyGateway();
-        //List<SpotifyGateway.Track> searchResult = gateway.searchTrack(searchText);
-
         LinearLayout progressBar = (LinearLayout) findViewById(R.id.search_progress);
         progressBar.setVisibility(View.GONE);
-        
+
         setListAdapter(createResultAdapter(result));        
     }
     
@@ -144,11 +141,6 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         private boolean mWasSuccess = true;
 
         @Override
-        public void onPreExecute() {
-            //showProgress();
-        }
-
-        @Override
         protected List<SpotifyGatewayTrack> doInBackground(String... params) {
             try {
                 SpotifyGateway gateway = new SpotifyGateway();
@@ -163,12 +155,9 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
 
         @Override
         protected void onPostExecute(List<SpotifyGatewayTrack> result) {
-            //dismissProgress();
-
             if (result != null && !result.isEmpty()) {
                 onSearchResult(result);
             } else if (!mWasSuccess) {
-                //showDialog(DIALOG_GET_SITES_NETWORK_PROBLEM);
                 Toast.makeText(SearchActivity.this, "Network problem...", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(SearchActivity.this, "No result...", Toast.LENGTH_SHORT).show();
