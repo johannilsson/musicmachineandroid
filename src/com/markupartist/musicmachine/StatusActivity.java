@@ -1,6 +1,15 @@
 package com.markupartist.musicmachine;
 
-import android.app.Activity;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TimerTask;
+
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -20,32 +29,26 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.SimpleAdapter.ViewBinder;
 
+import com.markupartist.musicmachine.gateway.LastFMGateway;
+import com.markupartist.musicmachine.gateway.LastFMGatewayAlbum;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway;
-import com.markupartist.musicmachine.gateway.SpotifyGatewayTrack;
+import com.markupartist.musicmachine.gateway.LastFMGateway.LastFMGatewayException;
+import com.markupartist.musicmachine.gateway.LastFMGatewayAlbumParser.LastFMGatewayParseException;
 import com.markupartist.musicmachine.gateway.MusicMachineGateway.PlaylistTrack;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import javax.jmdns.JmDNS;
-import javax.jmdns.ServiceInfo;
+import com.markupartist.musicmachine.utils.ImageLoader;
 
 public class StatusActivity extends ListActivity implements OnClickListener {
 	private final static Integer RECONNECT_DELAY = 5; // Seconds
 	private final static String TAG = StatusActivity.class.getSimpleName();
 	private MusicMachineGateway musicMachineGateway;
+	private LastFMGateway lastFMGateway = new LastFMGateway();
 
 	private SongCountDownTimer countDownTimer = null;
 	private GetPlaylistTask getPlaylistTask;
@@ -58,6 +61,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	private TextView currentSongArtist;
 	private TextView currentSongAlbum;
 	private TextView currentSongTime;
+	private ImageView albumArtView;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -73,8 +77,8 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		currentSongArtist = (TextView) findViewById(R.id.currentSongArtist);
 		currentSongAlbum = (TextView) findViewById(R.id.currentSongAlbum);
 		currentSongTime = (TextView) findViewById(R.id.currentSongTime);
+		albumArtView = (ImageView) findViewById(R.id.albumArt);
 
-		// musicMachineGateway = new MusicMachineGateway();
 		setupGateway();
 		
 		// Connect to the server
@@ -93,12 +97,20 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	public void onDestroy() {
 		handler.removeCallbacks(connectTask);
 		
+		if(null != connectTask) {
+			connectTask.cancel();
+		}
+		
 		if(null != getPlaylistTask) {
 			getPlaylistTask.cancel(true);
 		}
 		
 		if(null != getStatusTask) {
 			getStatusTask.cancel(true);
+		}
+		
+		if(true == ImageLoader.hasInstance()) {
+			ImageLoader.getInstance().cancel();
 		}
 		
 		cancelTimers();
@@ -116,7 +128,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
         try {
             JmDNS jmdns = JmDNS.create();
                 ServiceInfo[] infos = jmdns.list("_http._tcp.local.");
-                for (int i=0; i < infos.length; i++) {
+                for (int i = 0; i < infos.length; i++) {
                 	// the service name is optional really, we shouldn't do this
                 	if (infos[i].getName().equalsIgnoreCase("musicmachine")) {
                 		// write new config. We're not supposed to do this either since
@@ -135,8 +147,11 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		
 	}
 
-
-	private void requestPlaylist() {
+	/**
+	 * Perform an asynchronous playlist request if one is not already
+	 * executing.
+	 */
+	public void requestPlaylist() {
 		if(null == getPlaylistTask || getPlaylistTask.getStatus() == AsyncTask.Status.FINISHED) {
 			getPlaylistTask = new GetPlaylistTask();
 		}
@@ -146,7 +161,10 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		}
 	}
 	
-	private void requestStatus() {
+	/**
+	 * Perform an asynchronous status request if one is not already executing.
+	 */
+	public void requestStatus() {
 		if(null == getStatusTask || getStatusTask.getStatus() == AsyncTask.Status.FINISHED) {
 			getStatusTask = new GetStatusTask();
 		}
@@ -161,6 +179,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		currentSongArtist.setText("");
 		currentSongAlbum.setText("");
 		currentSongTime.setText("");
+		albumArtView.setImageResource(R.drawable.android_cover_small);
 	}
 
 	@Override
@@ -231,6 +250,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 
 		@Override
 		public void onFinish() {
+			requestStatus();
 			requestPlaylist();
 		}
 
@@ -255,7 +275,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		}
 
 		SimpleAdapter adapter = new SimpleAdapter(this, list,
-				R.layout.simple_track_row, new String[] { "artist", "title", },
+				R.layout.simple_track_row, new String[] {"artist", "title",},
 				new int[] { R.id.artist, R.id.title });
 
 		adapter.setViewBinder(new ViewBinder() {
@@ -290,8 +310,6 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 
         @Override
         protected void onPostExecute(List<PlaylistTrack> result) {
-            //dismissProgress();
-
             if (result != null) {
                 onPlaylistReceived(result);
             } else {
@@ -307,13 +325,23 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	
 	private void onPlaylistReceived(List<PlaylistTrack> playlist) {
 		Log.d(TAG, "Updating UI with " + playlist.size() + " songs.");
-
+		
 		if (playlist.size() > 0) {
 			PlaylistTrack song = playlist.get(0);
+			
+			try {
+				List<LastFMGatewayAlbum> albums = lastFMGateway.searchAlbum(song.artist, song.album);
+				ImageLoader.getInstance().load(albumArtView, albums.get(0).coverURL, true, R.drawable.android_cover_small, null);
+
+			} catch (LastFMGatewayException e) {
+				Log.e(TAG, e.toString());
+			} catch (LastFMGatewayParseException e) {
+				Log.e(TAG, e.toString());
+			}
+			
 			currentSongName.setText(song.title);
 			currentSongArtist.setText(song.artist);
 			currentSongAlbum.setText(song.album);
-			currentSongTime.setText("");
 
 			setListAdapter(createPlaylistAdapter(playlist.subList(1, playlist.size())));
 		} else {
@@ -321,7 +349,12 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 			setListAdapter(createPlaylistAdapter(playlist));
 		}
 	}
-	
+
+	/**
+	 * Task responsible for retrieving status info about the current playing
+	 * song. After receiving a status update it will initiate the count down
+	 * timer.
+	 */
 	private class GetStatusTask extends AsyncTask<Void, Void, MusicMachineGateway.Status> {
 
 		@Override
@@ -336,7 +369,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		}
 
         @Override
-        protected void onPostExecute(MusicMachineGateway.Status result) {
+        protected void onPostExecute(final MusicMachineGateway.Status result) {
             //dismissProgress();
 
             if (result != null) {
@@ -346,12 +379,20 @@ public class StatusActivity extends ListActivity implements OnClickListener {
             }
         }
 	}
-	
-	private void onStatusReceived(MusicMachineGateway.Status status) {
+
+	/**
+	 * Status update. Starts the count down timer to fetch the next status
+	 * update. See {@link SongCountDownTimer}.
+	 * @param status Status update received from server.
+	 */
+	private void onStatusReceived(final MusicMachineGateway.Status status) {
 		countDownTimer = new SongCountDownTimer(status.timeUntilVote, 1000);
 		countDownTimer.start();
 	}
-	
+
+	/**
+	 * Status error handler. This will trigger a reconnect attempt.
+	 */
 	private void onStatusError() {
 		connectTask.schedule(handler, RECONNECT_DELAY);
 	}
@@ -359,12 +400,20 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	class ConnectTask extends TimerTask {
 		private boolean isScheduled = false;
 		
+		/**
+		 * Schedule the task to execute in n seconds. If the task is already
+		 * scheduled then this will do nothing.
+		 * @param handler Handler to attach to.
+		 * @param seconds Execution delay.
+		 */
 		public void schedule(Handler handler, int seconds) {
 			if(false == isScheduled) {
 				Log.d(TAG, "Reconnecting in " + seconds + " seconds.");
 				isScheduled = true;
 				handler.removeCallbacks(this);
-				handler.postDelayed(this, seconds * 1000);
+				handler.postDelayed(this, seconds * 1000L);
+			} else {
+				Log.d(TAG, "Connect task already scheduled. Ignoring.");
 			}
 		}
 		
