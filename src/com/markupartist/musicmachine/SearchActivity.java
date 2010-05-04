@@ -109,25 +109,31 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
         noResultView.setVisibility(View.VISIBLE);
     }
 
+    private void onNetworkProblems() {
+        // TODO: Refactor this and onNoSearchResult...
+        LinearLayout progressBar = (LinearLayout) findViewById(R.id.search_progress);
+        progressBar.setVisibility(View.GONE);
+        LinearLayout noResultView = (LinearLayout) findViewById(R.id.search_no_result);
+        noResultView.setVisibility(View.VISIBLE);
+        TextView textView = (TextView) findViewById(R.id.search_no_result_message);
+        textView.setText("Failed to contact Spotify...");
+    }
+    
     private SimpleAdapter createResultAdapter(List<SpotifyGatewayTrack> tracks) {
         ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
         for (SpotifyGatewayTrack track : tracks) {
             Map<String, Object> map = new HashMap<String, Object>();
-            map.put("artist", track.getArtist());
-            map.put("title", track.getTitle());
-            map.put("album", track.getAlbum());
+            map.put("artist_album", String.format("%s • %s", track.getArtist(), track.getAlbum()));
             map.put("track", track);
             list.add(map);
         }
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, 
                 R.layout.track_row,
-                new String[] { "artist", "title", "album" },
+                new String[] { "artist_album", },
                 new int[] { 
-                    R.id.artist,
-                    R.id.title,
-                    R.id.album
+                    R.id.artist_album,
                 }
         );
 
@@ -136,9 +142,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
             public boolean setViewValue(View view, Object data,
                     String textRepresentation) {
                 switch (view.getId()) {
-                case R.id.artist:
-                case R.id.album:
-                case R.id.title:
+                case R.id.artist_album:
                     ((TextView)view).setText(textRepresentation);
                     return true;
                 }
@@ -173,7 +177,7 @@ public class SearchActivity extends ListActivity implements OnClickListener, OnE
             if (result != null && !result.isEmpty()) {
                 onSearchResult(result);
             } else if (!mWasSuccess) {
-                Toast.makeText(SearchActivity.this, "Network problem...", Toast.LENGTH_SHORT).show();
+                onNetworkProblems();
             } else {
                 onNoSearchResult();
             }

@@ -13,33 +13,24 @@
     android:textSize="18dip"
     android:text="Title"
     android:textColor="#000"
+    android:textStyle="bold"
+    android:maxLines="1"
+    android:scrollHorizontally="true"
     />
     <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingTop="5dip"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dip"
     >
 	<TextView  
-	    android:id="@+id/artist"
+	    android:id="@+id/artist_album"
 	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content" 
-	    android:text="Artist"
+	    android:text="Artist album"
 	    android:textColor="#000"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
 	    />
-    <TextView  
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:text="-"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
-        />
-    <TextView  
-        android:id="@+id/album"
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:text="Album"
-        android:textColor="#000"
-        />
     </LinearLayout>
 </LinearLayout>
