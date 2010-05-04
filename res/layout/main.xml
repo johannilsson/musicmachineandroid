@@ -5,46 +5,121 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
 	
-
-	
-
-	<RelativeLayout android:layout_height="wrap_content" android:layout_width="fill_parent"><ImageView android:id="@+id/albumArt" android:layout_width="fill_parent" android:adjustViewBounds="true" android:layout_height="wrap_content" android:scaleType="centerCrop" android:src="@drawable/android_cover_small" android:maxHeight="178dp" android:minHeight="178dp">
-		</ImageView>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+	   
+        <ImageView android:id="@+id/albumArt"
+			android:layout_width="fill_parent"
+			android:adjustViewBounds="true"
+			android:layout_height="wrap_content"
+			android:scaleType="centerCrop"
+			android:src="@drawable/android_cover_small"
+			android:maxHeight="178dp"
+			android:minHeight="178dp"/>
       
-	  <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_alignParentRight="true" android:orientation="vertical" android:background="@drawable/transparent_pixel" android:paddingLeft="10dip" android:paddingTop="6dip" android:paddingBottom="6dip"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/currentSongTime" android:id="@+id/currentSongTitle" android:text="Title" android:textColor="#ffffff" android:textStyle="bold" android:layout_alignParentTop="true" android:textSize="18px" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="5"></TextView><TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/currentSongArtist" android:text="Artist" android:textColor="#ffffff" android:layout_below="@+id/currentSongTitle" android:textSize="5pt" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="3"></TextView><TextView android:layout_height="wrap_content" android:layout_below="@+id/currentSongArtist" android:layout_width="wrap_content" android:id="@+id/currentSongAlbum" android:text="Album" android:textColor="#ffffff" android:textSize="5pt" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="3"></TextView></LinearLayout>
-	  <TextView
-	     android:layout_width="wrap_content"
-	     android:layout_height="wrap_content"
-	     android:text="Next track in: "
-	     android:textSize="18px"
-	     android:textColor="#ffffff" 
-	     android:textStyle="bold"
-	     android:id="@+id/next_track_text" android:layout_alignBottom="@+id/albumArt" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="5" android:layout_marginBottom="6dip" android:layout_marginLeft="10dip"></TextView>
-		
-		
-		
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:background="@drawable/transparent_pixel"
+            android:paddingLeft="10dip"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/currentSongTime"
+                android:id="@+id/currentSongTitle"
+                android:text="Title"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="5" android:textSize="7pt"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/currentSongArtist"
+                android:text="Artist"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/currentSongTitle"
+                android:textSize="5pt"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="3"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/currentSongArtist"
+                android:layout_width="wrap_content"
+                android:id="@+id/currentSongAlbum"
+                android:text="Album"
+                android:textColor="#ffffff"
+                android:textSize="5pt"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="3"/>
+        </LinearLayout>
 
-	
+        <TextView
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Next track in: "
+	        android:textSize="18px"
+	        android:textColor="#ffffff" 
+	        android:textStyle="bold"
+	        android:id="@+id/next_track_text"
+	        android:layout_alignBottom="@+id/albumArt"
+	        android:shadowColor="#000000"
+	        android:shadowDx="0"
+	        android:shadowDy="1"
+	        android:shadowRadius="5"
+	        android:layout_marginBottom="6dip"
+	        android:layout_marginLeft="10dip"/>
 
-<TextView
-   android:layout_height="wrap_content"
-   android:layout_width="wrap_content"
-   android:id="@+id/currentSongTime" 
-   android:text="3:43"
-   android:textColor="#ffffff"
-   android:textStyle="bold"
-   android:textSize="18px" android:layout_toRightOf="@+id/next_track_text" android:layout_alignTop="@+id/next_track_text" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="5"></TextView>
+        <TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/currentSongTime" 
+			android:text="3:43"
+			android:textColor="#ffffff"
+			android:textStyle="bold"
+			android:textSize="18px"
+			android:layout_toRightOf="@+id/next_track_text"
+			android:layout_alignTop="@+id/next_track_text"
+			android:shadowColor="#000000"
+			android:shadowDx="0"
+			android:shadowDy="1"
+			android:shadowRadius="5"/>
+    </RelativeLayout>
 
-</RelativeLayout>
-	
-
-	
-		
-
-
-		    <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="PLAYLIST" android:textColor="#ffffff" android:textStyle="bold" android:paddingLeft="10dip" android:gravity="center_vertical" android:background="@drawable/playlist_header" android:shadowColor="#000000" android:shadowDx="0" android:shadowDy="1" android:shadowRadius="5"></TextView><ListView android:id="@+id/android:list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.1dip" android:divider="#fff" android:layout_weight="0.5">
-</ListView><Button
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="PLAYLIST"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingLeft="10dip"
+        android:gravity="center_vertical"
+        android:background="@drawable/playlist_header"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="5"/>
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="0.1dip"
+        android:divider="#fff"
+        android:layout_weight="0.5"/>
+    <Button
         android:id="@+id/search_button"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
@@ -57,8 +132,4 @@
         android:shadowDy="1" 
         android:shadowRadius="5" 
         android:soundEffectsEnabled="false" android:text="SEARCH"/>
-
-
-
-
 </LinearLayout>
