@@ -125,6 +125,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	}
 
 	private void findServer() {
+	    boolean foundServer = false;
         try {
             JmDNS jmdns = JmDNS.create();
                 ServiceInfo[] infos = jmdns.list("_http._tcp.local.");
@@ -136,15 +137,18 @@ public class StatusActivity extends ListActivity implements OnClickListener {
                 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
                 		sharedPreferences.edit().putString("server_url", String.format("http://%s:%d", infos[i].getHostAddress(), infos[i].getPort())).commit();
                 		setupGateway();
-                		Toast.makeText(this, "Found server!", Toast.LENGTH_SHORT).show();
+                		foundServer = true;
                 	}
                 }
-                System.out.println();
         } catch (IOException e) {
         	Toast.makeText(this, "Error while searching: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
-    	Toast.makeText(this, "No server found", Toast.LENGTH_SHORT).show();
-		
+
+        if (foundServer) {
+            Toast.makeText(this, "Found server!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No server found", Toast.LENGTH_SHORT).show();
+        }
 	}
 
 	/**
