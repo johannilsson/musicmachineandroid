@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -53,6 +54,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	private SongCountDownTimer countDownTimer = null;
 	private GetPlaylistTask getPlaylistTask;
 	private GetStatusTask getStatusTask;
+	private GetAlbumArtTask getAlbumArtTask;
 	private Handler handler = new Handler();
 	private ConnectTask connectTask = new ConnectTask();
 
@@ -109,19 +111,19 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 			getStatusTask.cancel(true);
 		}
 		
+		if(null != getAlbumArtTask) {
+			getAlbumArtTask.cancel(true);
+		}
+	
 		if(true == ImageLoader.hasInstance()) {
 			ImageLoader.getInstance().cancel();
 		}
 		
-		cancelTimers();
-		
-		super.onDestroy();
-	}
-	
-	private void cancelTimers() {
 		if (null != countDownTimer) {
 			countDownTimer.cancel();
 		}
+		
+		super.onDestroy();
 	}
 
 	private void findServer() {
@@ -164,7 +166,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 			getPlaylistTask.execute();
 		}
 	}
-	
+
 	/**
 	 * Perform an asynchronous status request if one is not already executing.
 	 */
@@ -175,6 +177,19 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		
 		if(getStatusTask.getStatus() != AsyncTask.Status.RUNNING) {
 			getStatusTask.execute();
+		}
+	}
+
+	/**
+	 * Perform an asynchronous album art fetch request if one is not already executing.
+	 */
+	private void requestAlbumArt(MusicMachineGateway.PlaylistTrack song) {
+		if(null == getAlbumArtTask || getAlbumArtTask.getStatus() == AsyncTask.Status.FINISHED) {
+			getAlbumArtTask = new GetAlbumArtTask();
+		}
+		
+		if(getAlbumArtTask.getStatus() != AsyncTask.Status.RUNNING) {
+			getAlbumArtTask.execute(song);
 		}
 	}
 
@@ -330,22 +345,7 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 		
 		if (playlist.size() > 0) {
 			PlaylistTrack song = playlist.get(0);
-			
-			try {
-				List<LastFMGatewayAlbum> albums = lastFMGateway.searchAlbum(song.artist, song.album);
-				if (albums != null && albums.size() > 0) {
-				    ImageLoader.getInstance().load(albumArtView, albums.get(0).coverURL, true, R.drawable.android_cover_small, null);
-				} else {
-					albumArtView.setImageResource(R.drawable.android_cover_small);
-				}
-			} catch (LastFMGatewayException e) {
-				Log.e(TAG, e.toString());
-				albumArtView.setImageResource(R.drawable.android_cover_small);
-			} catch (LastFMGatewayParseException e) {
-				Log.e(TAG, e.toString());
-				albumArtView.setImageResource(R.drawable.android_cover_small);
-			}
-			
+			requestAlbumArt(song);
 			currentSongName.setText(song.title);
 			currentSongArtist.setText(song.artist);
 			currentSongAlbum.setText(song.album);
@@ -385,6 +385,49 @@ public class StatusActivity extends ListActivity implements OnClickListener {
             	onStatusError();
             }
         }
+	}
+	
+	/**
+	 * Task responsible for downloading album art from LastFM. If multiple
+	 * covers are returned from LastFM then the first found cover will be
+	 * taken. The default cover will be set on parse error or if no cover
+	 * data (album/artist) is specified.
+	 */
+	private class GetAlbumArtTask extends AsyncTask<MusicMachineGateway.PlaylistTrack, Void, String> {
+
+		@Override
+		protected String doInBackground(MusicMachineGateway.PlaylistTrack... args) {
+			if(null == args || args.length == 0) {
+				return null;
+			}
+			
+			MusicMachineGateway.PlaylistTrack track = (MusicMachineGateway.PlaylistTrack) args[0];
+
+			try {
+				List<LastFMGatewayAlbum> albums = lastFMGateway.searchAlbum(track.artist, track.album);
+				
+				// If we got multiple replies back then just snag the first
+				// one. 
+				if (albums != null && albums.size() > 0) {
+					return albums.get(0).coverURL;
+				}
+			} catch (LastFMGatewayException e) {
+				Log.e(TAG, e.toString());
+			} catch (LastFMGatewayParseException e) {
+				Log.e(TAG, e.toString());
+			}
+			
+			return null;
+		}
+		
+		@Override
+		protected void onPostExecute(final String coverURL) {
+			if (null != coverURL && false == TextUtils.isEmpty(coverURL)) {
+			    ImageLoader.getInstance().load(albumArtView, coverURL, true, R.drawable.android_cover_small, null);
+			} else {
+				albumArtView.setImageResource(R.drawable.android_cover_small);
+			}
+		}
 	}
 
 	/**
