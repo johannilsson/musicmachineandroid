@@ -130,18 +130,18 @@ public class StatusActivity extends ListActivity implements OnClickListener {
 	    boolean foundServer = false;
         try {
             JmDNS jmdns = JmDNS.create();
-                ServiceInfo[] infos = jmdns.list("_http._tcp.local.");
-                for (int i = 0; i < infos.length; i++) {
-                	// the service name is optional really, we shouldn't do this
-                	if (infos[i].getName().equalsIgnoreCase("musicmachine")) {
-                		// write new config. We're not supposed to do this either since
-                		// we're supposed to be dynamic when using mdns
-                		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-                		sharedPreferences.edit().putString("server_url", String.format("http://%s:%d", infos[i].getHostAddress(), infos[i].getPort())).commit();
-                		setupGateway();
-                		foundServer = true;
-                	}
+            ServiceInfo[] infos = jmdns.list("_http._tcp.local.");
+            for (int i = 0; i < infos.length; i++) {
+                // HACK: Anything on this port should be a music machine
+                if (infos[i].getPort() == 6170) {
+                    // write new config. We're not supposed to do this either since
+                    // we're supposed to be dynamic when using mdns
+                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                    sharedPreferences.edit().putString("server_url", String.format("http://%s:%d", infos[i].getHostAddress(), infos[i].getPort())).commit();
+                    setupGateway();
+                    foundServer = true;
                 }
+            }
         } catch (IOException e) {
         	Toast.makeText(this, "Error while searching: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
