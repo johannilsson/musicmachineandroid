@@ -21,6 +21,7 @@
     <orderEntry type="library" exported="" name="dom4j" level="project" />
     <orderEntry type="library" exported="" name="gson" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Android 1.6 Google APIs" level="application" />
+    <orderEntry type="library" name="jmdns" level="project" />
   </component>
 </module>
 
